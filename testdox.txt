@@ -11,12 +11,12 @@ Model (Tests\Feature\Playground\Directory\Models\Sublocation\Model)
  [x] Verify model relationships
  [x] Factory create
 
-Model (Tests\Unit\Tests\Feature\Playground\Directory\Models\Location\Model)
+Model (Tests\Unit\Playground\Directory\Models\Location\Model)
  [x] Model instance
  [x] Verify model relationships
  [x] Model factory make
 
-Model (Tests\Unit\Tests\Feature\Playground\Directory\Models\Sublocation\Model)
+Model (Tests\Unit\Playground\Directory\Models\Sublocation\Model)
  [x] Model instance
  [x] Verify model relationships
  [x] Model factory make
