@@ -4,12 +4,12 @@
  */
 
 declare(strict_types=1);
-namespace Tests\Unit\Tests\Feature\Playground\Directory\Models\Location;
+namespace Tests\Unit\Playground\Directory\Models\Location;
 
 use Tests\Unit\Playground\Directory\Models\ModelCase;
 
 /**
- * \Tests\Unit\Tests\Feature\Playground\Directory\Models\Location\ModelTest
+ * \Tests\Unit\Playground\Directory\Models\Location\ModelTest
  */
 class ModelTest extends ModelCase
 {

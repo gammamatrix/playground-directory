@@ -20,7 +20,6 @@ All options are disabled by default.
 
 See the contents of the published config file: [config/playground-directory.php](config/playground-directory.php)
 
-
 ## Cloc
 
 ```sh
@@ -30,23 +29,23 @@ composer cloc
 ```
 ➜  playground-directory git:(develop) ✗ composer cloc
 > cloc --exclude-dir=node_modules,output,vendor .
-      41 text files.
+      34 text files.
       31 unique files.
-      11 files ignored.
+       4 files ignored.
 
-github.com/AlDanial/cloc v 1.98  T=0.07 s (436.0 files/s, 100552.5 lines/s)
+github.com/AlDanial/cloc v 1.98  T=0.05 s (662.3 files/s, 153656.0 lines/s)
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
 JSON                             4              0              0           4798
-PHP                             19            156            435           1191
+PHP                             19            154            429           1187
 YAML                             1              5              0            275
 XML                              3              0              7            215
-Markdown                         3             18              0             35
+Markdown                         3             28              0             79
 INI                              1              3              0             12
 -------------------------------------------------------------------------------
-SUM:                            31            182            442           6526
--------------------------------------------------------------------------------
+SUM:                            31            190            436           6566
+-------------------------------------------------------------------------------```
 ```
 
 ## PHPStan
