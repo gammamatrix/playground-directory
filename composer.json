@@ -30,14 +30,14 @@
     },
     "autoload": {
         "psr-4": {
-            "Database\\Factories\\Playground\\Directory\\Models\\": "database/factories",
-            "Playground\\Directory\\": "src"
+            "Database\\Factories\\Playground\\Directory\\Models\\": "database/factories/",
+            "Playground\\Directory\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\Feature\\Playground\\Directory\\": "tests/Feature",
-            "Tests\\Unit\\Playground\\Directory\\": "tests/Unit"
+            "Tests\\Feature\\Playground\\Directory\\": "tests/Feature/",
+            "Tests\\Unit\\Playground\\Directory\\": "tests/Unit/"
         }
     },
     "config": {
