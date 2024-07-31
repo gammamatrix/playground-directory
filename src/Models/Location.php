@@ -12,12 +12,16 @@ use Playground\Models\Model;
 /**
  * \Playground\Directory\Models\Location
  *
+ * @property string $id
  * @property ?scalar $created_by_id
  * @property ?scalar $modified_by_id
  * @property ?scalar $owned_by_id
  * @property ?string $parent_id
  * @property ?string $location_type
  * @property ?string $matrix_id
+ * @property ?Carbon $created_at
+ * @property ?Carbon $updated_at
+ * @property ?Carbon $deleted_at
  * @property ?Carbon $start_at
  * @property ?Carbon $planned_start_at
  * @property ?Carbon $end_at
@@ -328,22 +332,8 @@ class Location extends Model
         ];
     }
 
-    // /**
-    //  * Get the revisions of the model.
-    //  *
-    //  * @return HasMany<LocationRevision>
-    //  */
-    // public function revisions(): HasMany
-    // {
-    //     return $this->hasMany(
-    //         LocationRevision::class,
-    //         'location_id',
-    //         'id'
-    //     );
-    // }
-
     /**
-     * Get the revisions of the model.
+     * The sublocations of the location.
      *
      * @return HasMany<Sublocation>
      */

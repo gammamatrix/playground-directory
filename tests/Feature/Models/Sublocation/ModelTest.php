@@ -4,26 +4,28 @@
  */
 
 declare(strict_types=1);
-namespace Tests\Feature\Playground\Directory\Sublocation;
+namespace Tests\Feature\Playground\Directory\Models\Sublocation;
 
 use Tests\Feature\Playground\Directory\Models\ModelCase;
 
 /**
- * \Tests\Feature\Playground\Directory\Sublocation\InstanceTest
+ * \Tests\Feature\Playground\Directory\Models\Sublocation\ModelTest
  */
-class InstanceTest extends ModelCase
+class ModelTest extends ModelCase
 {
     protected string $modelClass = \Playground\Directory\Models\Sublocation::class;
 
     protected bool $hasRelationships = true;
 
     /**
-     * @var array<string, array<string, mixed>> Test hasMany relationships.
+     * @var array<string, array<string, mixed>> Test has many relationships.
      */
     protected array $hasMany = [
-        // 'revisions' => ['key' => 'sublocation_id', 'modelClass' => \Playground\Directory\Models\SublocationRevision::class],
     ];
 
+    /**
+     * @var array<string, array<string, mixed>> Test has one relationships.
+     */
     protected array $hasOne = [
         'creator' => [
             'key' => 'created_by_id',

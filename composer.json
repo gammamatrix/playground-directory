@@ -3,6 +3,7 @@
     "description": "Playground: Provide the Directory models for the Playground Directory System.",
     "keywords": [
         "cms",
+        "directory",
         "gammamatrix",
         "laravel",
         "playground"

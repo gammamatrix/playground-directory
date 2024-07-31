@@ -12,6 +12,7 @@ use Playground\Models\Model;
 /**
  * \Playground\Directory\Models\Sublocation
  *
+ * @property string $id
  * @property ?scalar $created_by_id
  * @property ?scalar $modified_by_id
  * @property ?scalar $owned_by_id
@@ -19,6 +20,9 @@ use Playground\Models\Model;
  * @property ?string $sublocation_type
  * @property ?string $matrix_id
  * @property ?string $location_id
+ * @property ?Carbon $created_at
+ * @property ?Carbon $updated_at
+ * @property ?Carbon $deleted_at
  * @property ?Carbon $start_at
  * @property ?Carbon $planned_start_at
  * @property ?Carbon $end_at
@@ -342,18 +346,4 @@ class Sublocation extends Model
             'location_id'
         );
     }
-
-    // /**
-    //  * Get the revisions of the model.
-    //  *
-    //  * @return HasMany<SublocationRevision>
-    //  */
-    // public function revisions(): HasMany
-    // {
-    //     return $this->hasMany(
-    //         SublocationRevision::class,
-    //         'location_id',
-    //         'id'
-    //     );
-    // }
 }
