@@ -9,11 +9,11 @@
 
 ##teamcity[testStarted name='test_model_instance' locationHint='php_qn:///app/vendor/gammamatrix/playground-test/src/Unit/Models/ModelCase.php::\Tests\Unit\Playground\Directory\Models\Location\ModelTest::test_model_instance' flowId='1']
 
-##teamcity[testFinished name='test_model_instance' duration='167' flowId='1']
+##teamcity[testFinished name='test_model_instance' duration='164' flowId='1']
 
 ##teamcity[testStarted name='test_verify_model_relationships' locationHint='php_qn:///app/vendor/gammamatrix/playground-test/src/Unit/Models/ModelCase.php::\Tests\Unit\Playground\Directory\Models\Location\ModelTest::test_verify_model_relationships' flowId='1']
 
-##teamcity[testFinished name='test_verify_model_relationships' duration='48' flowId='1']
+##teamcity[testFinished name='test_verify_model_relationships' duration='47' flowId='1']
 
 ##teamcity[testStarted name='test_model_factory_make' locationHint='php_qn:///app/vendor/gammamatrix/playground-test/src/Unit/Models/ModelCase.php::\Tests\Unit\Playground\Directory\Models\Location\ModelTest::test_model_factory_make' flowId='1']
 
@@ -33,7 +33,7 @@
 
 ##teamcity[testStarted name='test_model_factory_make' locationHint='php_qn:///app/vendor/gammamatrix/playground-test/src/Unit/Models/ModelCase.php::\Tests\Unit\Playground\Directory\Models\Sublocation\ModelTest::test_model_factory_make' flowId='1']
 
-##teamcity[testFinished name='test_model_factory_make' duration='6' flowId='1']
+##teamcity[testFinished name='test_model_factory_make' duration='7' flowId='1']
 
 ##teamcity[testSuiteFinished name='Tests\Unit\Playground\Directory\Models\Sublocation\ModelTest' flowId='1']
 
@@ -45,7 +45,7 @@
 
 ##teamcity[testStarted name='test_command_about_displays_package_information_and_succeed_with_code_0' locationHint='php_qn:///app/tests/Feature/Console/Commands/About/CommandTest.php::\Tests\Feature\Playground\Directory\Console\Commands\About\CommandTest::test_command_about_displays_package_information_and_succeed_with_code_0' flowId='1']
 
-##teamcity[testFinished name='test_command_about_displays_package_information_and_succeed_with_code_0' duration='122' flowId='1']
+##teamcity[testFinished name='test_command_about_displays_package_information_and_succeed_with_code_0' duration='119' flowId='1']
 
 ##teamcity[testSuiteFinished name='Tests\Feature\Playground\Directory\Console\Commands\About\CommandTest' flowId='1']
 
@@ -57,7 +57,7 @@
 
 ##teamcity[testStarted name='test_verify_model_relationships' locationHint='php_qn:///app/vendor/gammamatrix/playground-test/src/Feature/Models/ModelCase.php::\Tests\Feature\Playground\Directory\Models\Location\ModelTest::test_verify_model_relationships' flowId='1']
 
-##teamcity[testFinished name='test_verify_model_relationships' duration='173' flowId='1']
+##teamcity[testFinished name='test_verify_model_relationships' duration='155' flowId='1']
 
 ##teamcity[testStarted name='test_factory_create' locationHint='php_qn:///app/vendor/gammamatrix/playground-test/src/Feature/Models/ModelCase.php::\Tests\Feature\Playground\Directory\Models\Location\ModelTest::test_factory_create' flowId='1']
 
@@ -69,11 +69,11 @@
 
 ##teamcity[testStarted name='test_model_instance' locationHint='php_qn:///app/vendor/gammamatrix/playground-test/src/Feature/Models/ModelCase.php::\Tests\Feature\Playground\Directory\Models\Sublocation\ModelTest::test_model_instance' flowId='1']
 
-##teamcity[testFinished name='test_model_instance' duration='27' flowId='1']
+##teamcity[testFinished name='test_model_instance' duration='28' flowId='1']
 
 ##teamcity[testStarted name='test_verify_model_relationships' locationHint='php_qn:///app/vendor/gammamatrix/playground-test/src/Feature/Models/ModelCase.php::\Tests\Feature\Playground\Directory\Models\Sublocation\ModelTest::test_verify_model_relationships' flowId='1']
 
-##teamcity[testFinished name='test_verify_model_relationships' duration='115' flowId='1']
+##teamcity[testFinished name='test_verify_model_relationships' duration='116' flowId='1']
 
 ##teamcity[testStarted name='test_factory_create' locationHint='php_qn:///app/vendor/gammamatrix/playground-test/src/Feature/Models/ModelCase.php::\Tests\Feature\Playground\Directory\Models\Sublocation\ModelTest::test_factory_create' flowId='1']
 
