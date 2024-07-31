@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="/app/phpunit-ci.xml" tests="13" assertions="90" errors="0" failures="0" skipped="0" time="1.553051">
+    <testsuite name="Unit" tests="6" assertions="18" errors="0" failures="0" skipped="0" time="0.409706">
+      <testsuite name="Tests\Unit\Playground\Directory\Location\InstanceTest" file="/app/tests/Unit/Models/Location/InstanceTest.php" tests="3" assertions="9" errors="0" failures="0" skipped="0" time="0.336686">
+        <testcase name="test_model_instance" file="/app/vendor/gammamatrix/playground-test/src/Unit/Models/ModelCase.php" line="103" class="Tests\Unit\Playground\Directory\Location\InstanceTest" classname="Tests.Unit.Playground.Directory.Location.InstanceTest" assertions="1" time="0.235628"/>
+        <testcase name="test_verify_model_relationships" file="/app/vendor/gammamatrix/playground-test/src/Unit/Models/ModelCase.php" line="264" class="Tests\Unit\Playground\Directory\Location\InstanceTest" classname="Tests.Unit.Playground.Directory.Location.InstanceTest" assertions="5" time="0.066531"/>
+        <testcase name="test_model_factory_make" file="/app/vendor/gammamatrix/playground-test/src/Unit/Models/ModelCase.php" line="280" class="Tests\Unit\Playground\Directory\Location\InstanceTest" classname="Tests.Unit.Playground.Directory.Location.InstanceTest" assertions="3" time="0.034528"/>
+      </testsuite>
+      <testsuite name="Tests\Unit\Playground\Directory\Sublocation\InstanceTest" file="/app/tests/Unit/Models/Sublocation/InstanceTest.php" tests="3" assertions="9" errors="0" failures="0" skipped="0" time="0.073019">
+        <testcase name="test_model_instance" file="/app/vendor/gammamatrix/playground-test/src/Unit/Models/ModelCase.php" line="103" class="Tests\Unit\Playground\Directory\Sublocation\InstanceTest" classname="Tests.Unit.Playground.Directory.Sublocation.InstanceTest" assertions="1" time="0.022659"/>
+        <testcase name="test_verify_model_relationships" file="/app/vendor/gammamatrix/playground-test/src/Unit/Models/ModelCase.php" line="264" class="Tests\Unit\Playground\Directory\Sublocation\InstanceTest" classname="Tests.Unit.Playground.Directory.Sublocation.InstanceTest" assertions="5" time="0.024766"/>
+        <testcase name="test_model_factory_make" file="/app/vendor/gammamatrix/playground-test/src/Unit/Models/ModelCase.php" line="280" class="Tests\Unit\Playground\Directory\Sublocation\InstanceTest" classname="Tests.Unit.Playground.Directory.Sublocation.InstanceTest" assertions="3" time="0.025595"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="Feature" tests="7" assertions="72" errors="0" failures="0" skipped="0" time="1.143346">
+      <testsuite name="Tests\Feature\Playground\Directory\Console\Commands\About\CommandTest" file="/app/tests/Feature/Console/Commands/About/CommandTest.php" tests="1" assertions="2" errors="0" failures="0" skipped="0" time="0.252378">
+        <testcase name="test_command_about_displays_package_information_and_succeed_with_code_0" file="/app/tests/Feature/Console/Commands/About/CommandTest.php" line="32" class="Tests\Feature\Playground\Directory\Console\Commands\About\CommandTest" classname="Tests.Feature.Playground.Directory.Console.Commands.About.CommandTest" assertions="2" time="0.252378"/>
+      </testsuite>
+      <testsuite name="Tests\Feature\Playground\Directory\Location\InstanceTest" file="/app/tests/Feature/Models/Location/InstanceTest.php" tests="3" assertions="36" errors="0" failures="0" skipped="0" time="0.473504">
+        <testcase name="test_model_instance" file="/app/vendor/gammamatrix/playground-test/src/Feature/Models/ModelCase.php" line="109" class="Tests\Feature\Playground\Directory\Location\InstanceTest" classname="Tests.Feature.Playground.Directory.Location.InstanceTest" assertions="1" time="0.108458"/>
+        <testcase name="test_verify_model_relationships" file="/app/vendor/gammamatrix/playground-test/src/Feature/Models/ModelCase.php" line="528" class="Tests\Feature\Playground\Directory\Location\InstanceTest" classname="Tests.Feature.Playground.Directory.Location.InstanceTest" assertions="32" time="0.250433"/>
+        <testcase name="test_factory_create" file="/app/vendor/gammamatrix/playground-test/src/Feature/Models/ModelCase.php" line="549" class="Tests\Feature\Playground\Directory\Location\InstanceTest" classname="Tests.Feature.Playground.Directory.Location.InstanceTest" assertions="3" time="0.114612"/>
+      </testsuite>
+      <testsuite name="Tests\Feature\Playground\Directory\Sublocation\InstanceTest" file="/app/tests/Feature/Models/Sublocation/InstanceTest.php" tests="3" assertions="34" errors="0" failures="0" skipped="0" time="0.417463">
+        <testcase name="test_model_instance" file="/app/vendor/gammamatrix/playground-test/src/Feature/Models/ModelCase.php" line="109" class="Tests\Feature\Playground\Directory\Sublocation\InstanceTest" classname="Tests.Feature.Playground.Directory.Sublocation.InstanceTest" assertions="1" time="0.106654"/>
+        <testcase name="test_verify_model_relationships" file="/app/vendor/gammamatrix/playground-test/src/Feature/Models/ModelCase.php" line="528" class="Tests\Feature\Playground\Directory\Sublocation\InstanceTest" classname="Tests.Feature.Playground.Directory.Sublocation.InstanceTest" assertions="30" time="0.196658"/>
+        <testcase name="test_factory_create" file="/app/vendor/gammamatrix/playground-test/src/Feature/Models/ModelCase.php" line="549" class="Tests\Feature\Playground\Directory\Sublocation\InstanceTest" classname="Tests.Feature.Playground.Directory.Sublocation.InstanceTest" assertions="3" time="0.114151"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>
