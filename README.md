@@ -2,7 +2,7 @@
 
 [![Playground CI Workflow](https://github.com/gammamatrix/playground-directory/actions/workflows/ci.yml/badge.svg?branch=develop)](https://raw.githubusercontent.com/gammamatrix/playground-directory/testing/develop/testdox.txt)
 [![Test Coverage](https://raw.githubusercontent.com/gammamatrix/playground-directory/testing/develop/coverage.svg)](tests)
-[![PHPStan Level 9](https://img.shields.io/badge/PHPStan-level%%209-brightgreen)](.github/workflows/ci.yml#L120)
+[![PHPStan Level 9](https://img.shields.io/badge/PHPStan-level%209-brightgreen)](.github/workflows/ci.yml#L120)
 
 The Playground: Directory package.
 
@@ -18,7 +18,7 @@ composer require gammamatrix/playground-directory
 
 All options are disabled by default.
 
-See the contents of the published config file: [config/playground-directory.php](.config/playground-directory.php)
+See the contents of the published config file: [config/playground-directory.php](config/playground-directory.php)
 
 
 ## Changelog
