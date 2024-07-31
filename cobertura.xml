@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="1" branch-rate="0" lines-covered="180" lines-valid="180" branches-covered="0" branches-valid="0" complexity="18" version="0.4" timestamp="1722446324">
+<coverage line-rate="1" branch-rate="0" lines-covered="180" lines-valid="180" branches-covered="0" branches-valid="0" complexity="18" version="0.4" timestamp="1722453586">
   <sources>
     <source>/app/src</source>
   </sources>
@@ -11,177 +11,6 @@
           <methods>
             <method name="casts" signature="" line-rate="1" branch-rate="0" complexity="1">
               <lines>
-                <line number="259" hits="8"/>
-                <line number="260" hits="8"/>
-                <line number="261" hits="8"/>
-                <line number="262" hits="8"/>
-                <line number="263" hits="8"/>
-                <line number="264" hits="8"/>
-                <line number="265" hits="8"/>
-                <line number="266" hits="8"/>
-                <line number="267" hits="8"/>
-                <line number="268" hits="8"/>
-                <line number="269" hits="8"/>
-                <line number="270" hits="8"/>
-                <line number="271" hits="8"/>
-                <line number="272" hits="8"/>
-                <line number="273" hits="8"/>
-                <line number="274" hits="8"/>
-                <line number="275" hits="8"/>
-                <line number="276" hits="8"/>
-                <line number="277" hits="8"/>
-                <line number="278" hits="8"/>
-                <line number="279" hits="8"/>
-                <line number="280" hits="8"/>
-                <line number="281" hits="8"/>
-                <line number="282" hits="8"/>
-                <line number="283" hits="8"/>
-                <line number="284" hits="8"/>
-                <line number="285" hits="8"/>
-                <line number="286" hits="8"/>
-                <line number="287" hits="8"/>
-                <line number="288" hits="8"/>
-                <line number="289" hits="8"/>
-                <line number="290" hits="8"/>
-                <line number="291" hits="8"/>
-                <line number="292" hits="8"/>
-                <line number="293" hits="8"/>
-                <line number="294" hits="8"/>
-                <line number="295" hits="8"/>
-                <line number="296" hits="8"/>
-                <line number="297" hits="8"/>
-                <line number="298" hits="8"/>
-                <line number="299" hits="8"/>
-                <line number="300" hits="8"/>
-                <line number="301" hits="8"/>
-                <line number="302" hits="8"/>
-                <line number="303" hits="8"/>
-                <line number="304" hits="8"/>
-                <line number="305" hits="8"/>
-                <line number="306" hits="8"/>
-                <line number="307" hits="8"/>
-                <line number="308" hits="8"/>
-                <line number="309" hits="8"/>
-                <line number="310" hits="8"/>
-                <line number="311" hits="8"/>
-                <line number="312" hits="8"/>
-                <line number="313" hits="8"/>
-                <line number="314" hits="8"/>
-                <line number="315" hits="8"/>
-                <line number="316" hits="8"/>
-                <line number="317" hits="8"/>
-                <line number="318" hits="8"/>
-                <line number="319" hits="8"/>
-                <line number="320" hits="8"/>
-                <line number="321" hits="8"/>
-                <line number="322" hits="8"/>
-                <line number="323" hits="8"/>
-                <line number="324" hits="8"/>
-                <line number="325" hits="8"/>
-                <line number="326" hits="8"/>
-                <line number="327" hits="8"/>
-                <line number="328" hits="8"/>
-              </lines>
-            </method>
-            <method name="sublocations" signature="" line-rate="1" branch-rate="0" complexity="1">
-              <lines>
-                <line number="352" hits="2"/>
-                <line number="353" hits="2"/>
-                <line number="354" hits="2"/>
-                <line number="355" hits="2"/>
-                <line number="356" hits="2"/>
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="259" hits="8"/>
-            <line number="260" hits="8"/>
-            <line number="261" hits="8"/>
-            <line number="262" hits="8"/>
-            <line number="263" hits="8"/>
-            <line number="264" hits="8"/>
-            <line number="265" hits="8"/>
-            <line number="266" hits="8"/>
-            <line number="267" hits="8"/>
-            <line number="268" hits="8"/>
-            <line number="269" hits="8"/>
-            <line number="270" hits="8"/>
-            <line number="271" hits="8"/>
-            <line number="272" hits="8"/>
-            <line number="273" hits="8"/>
-            <line number="274" hits="8"/>
-            <line number="275" hits="8"/>
-            <line number="276" hits="8"/>
-            <line number="277" hits="8"/>
-            <line number="278" hits="8"/>
-            <line number="279" hits="8"/>
-            <line number="280" hits="8"/>
-            <line number="281" hits="8"/>
-            <line number="282" hits="8"/>
-            <line number="283" hits="8"/>
-            <line number="284" hits="8"/>
-            <line number="285" hits="8"/>
-            <line number="286" hits="8"/>
-            <line number="287" hits="8"/>
-            <line number="288" hits="8"/>
-            <line number="289" hits="8"/>
-            <line number="290" hits="8"/>
-            <line number="291" hits="8"/>
-            <line number="292" hits="8"/>
-            <line number="293" hits="8"/>
-            <line number="294" hits="8"/>
-            <line number="295" hits="8"/>
-            <line number="296" hits="8"/>
-            <line number="297" hits="8"/>
-            <line number="298" hits="8"/>
-            <line number="299" hits="8"/>
-            <line number="300" hits="8"/>
-            <line number="301" hits="8"/>
-            <line number="302" hits="8"/>
-            <line number="303" hits="8"/>
-            <line number="304" hits="8"/>
-            <line number="305" hits="8"/>
-            <line number="306" hits="8"/>
-            <line number="307" hits="8"/>
-            <line number="308" hits="8"/>
-            <line number="309" hits="8"/>
-            <line number="310" hits="8"/>
-            <line number="311" hits="8"/>
-            <line number="312" hits="8"/>
-            <line number="313" hits="8"/>
-            <line number="314" hits="8"/>
-            <line number="315" hits="8"/>
-            <line number="316" hits="8"/>
-            <line number="317" hits="8"/>
-            <line number="318" hits="8"/>
-            <line number="319" hits="8"/>
-            <line number="320" hits="8"/>
-            <line number="321" hits="8"/>
-            <line number="322" hits="8"/>
-            <line number="323" hits="8"/>
-            <line number="324" hits="8"/>
-            <line number="325" hits="8"/>
-            <line number="326" hits="8"/>
-            <line number="327" hits="8"/>
-            <line number="328" hits="8"/>
-            <line number="352" hits="2"/>
-            <line number="353" hits="2"/>
-            <line number="354" hits="2"/>
-            <line number="355" hits="2"/>
-            <line number="356" hits="2"/>
-          </lines>
-        </class>
-      </classes>
-    </package>
-    <package name="Models/Sublocation.php" line-rate="1" branch-rate="0" complexity="2">
-      <classes>
-        <class name="Playground\Directory\Models\Sublocation" filename="Models/Sublocation.php" line-rate="1" branch-rate="0" complexity="2">
-          <methods>
-            <method name="casts" signature="" line-rate="1" branch-rate="0" complexity="1">
-              <lines>
-                <line number="260" hits="8"/>
-                <line number="261" hits="8"/>
-                <line number="262" hits="8"/>
                 <line number="263" hits="8"/>
                 <line number="264" hits="8"/>
                 <line number="265" hits="8"/>
@@ -249,22 +78,22 @@
                 <line number="327" hits="8"/>
                 <line number="328" hits="8"/>
                 <line number="329" hits="8"/>
+                <line number="330" hits="8"/>
+                <line number="331" hits="8"/>
+                <line number="332" hits="8"/>
               </lines>
             </method>
-            <method name="location" signature="" line-rate="1" branch-rate="0" complexity="1">
+            <method name="sublocations" signature="" line-rate="1" branch-rate="0" complexity="1">
               <lines>
-                <line number="339" hits="2"/>
-                <line number="340" hits="2"/>
-                <line number="341" hits="2"/>
                 <line number="342" hits="2"/>
                 <line number="343" hits="2"/>
+                <line number="344" hits="2"/>
+                <line number="345" hits="2"/>
+                <line number="346" hits="2"/>
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="260" hits="8"/>
-            <line number="261" hits="8"/>
-            <line number="262" hits="8"/>
             <line number="263" hits="8"/>
             <line number="264" hits="8"/>
             <line number="265" hits="8"/>
@@ -332,11 +161,182 @@
             <line number="327" hits="8"/>
             <line number="328" hits="8"/>
             <line number="329" hits="8"/>
-            <line number="339" hits="2"/>
-            <line number="340" hits="2"/>
-            <line number="341" hits="2"/>
+            <line number="330" hits="8"/>
+            <line number="331" hits="8"/>
+            <line number="332" hits="8"/>
             <line number="342" hits="2"/>
             <line number="343" hits="2"/>
+            <line number="344" hits="2"/>
+            <line number="345" hits="2"/>
+            <line number="346" hits="2"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Models/Sublocation.php" line-rate="1" branch-rate="0" complexity="2">
+      <classes>
+        <class name="Playground\Directory\Models\Sublocation" filename="Models/Sublocation.php" line-rate="1" branch-rate="0" complexity="2">
+          <methods>
+            <method name="casts" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="264" hits="8"/>
+                <line number="265" hits="8"/>
+                <line number="266" hits="8"/>
+                <line number="267" hits="8"/>
+                <line number="268" hits="8"/>
+                <line number="269" hits="8"/>
+                <line number="270" hits="8"/>
+                <line number="271" hits="8"/>
+                <line number="272" hits="8"/>
+                <line number="273" hits="8"/>
+                <line number="274" hits="8"/>
+                <line number="275" hits="8"/>
+                <line number="276" hits="8"/>
+                <line number="277" hits="8"/>
+                <line number="278" hits="8"/>
+                <line number="279" hits="8"/>
+                <line number="280" hits="8"/>
+                <line number="281" hits="8"/>
+                <line number="282" hits="8"/>
+                <line number="283" hits="8"/>
+                <line number="284" hits="8"/>
+                <line number="285" hits="8"/>
+                <line number="286" hits="8"/>
+                <line number="287" hits="8"/>
+                <line number="288" hits="8"/>
+                <line number="289" hits="8"/>
+                <line number="290" hits="8"/>
+                <line number="291" hits="8"/>
+                <line number="292" hits="8"/>
+                <line number="293" hits="8"/>
+                <line number="294" hits="8"/>
+                <line number="295" hits="8"/>
+                <line number="296" hits="8"/>
+                <line number="297" hits="8"/>
+                <line number="298" hits="8"/>
+                <line number="299" hits="8"/>
+                <line number="300" hits="8"/>
+                <line number="301" hits="8"/>
+                <line number="302" hits="8"/>
+                <line number="303" hits="8"/>
+                <line number="304" hits="8"/>
+                <line number="305" hits="8"/>
+                <line number="306" hits="8"/>
+                <line number="307" hits="8"/>
+                <line number="308" hits="8"/>
+                <line number="309" hits="8"/>
+                <line number="310" hits="8"/>
+                <line number="311" hits="8"/>
+                <line number="312" hits="8"/>
+                <line number="313" hits="8"/>
+                <line number="314" hits="8"/>
+                <line number="315" hits="8"/>
+                <line number="316" hits="8"/>
+                <line number="317" hits="8"/>
+                <line number="318" hits="8"/>
+                <line number="319" hits="8"/>
+                <line number="320" hits="8"/>
+                <line number="321" hits="8"/>
+                <line number="322" hits="8"/>
+                <line number="323" hits="8"/>
+                <line number="324" hits="8"/>
+                <line number="325" hits="8"/>
+                <line number="326" hits="8"/>
+                <line number="327" hits="8"/>
+                <line number="328" hits="8"/>
+                <line number="329" hits="8"/>
+                <line number="330" hits="8"/>
+                <line number="331" hits="8"/>
+                <line number="332" hits="8"/>
+                <line number="333" hits="8"/>
+              </lines>
+            </method>
+            <method name="location" signature="" line-rate="1" branch-rate="0" complexity="1">
+              <lines>
+                <line number="343" hits="2"/>
+                <line number="344" hits="2"/>
+                <line number="345" hits="2"/>
+                <line number="346" hits="2"/>
+                <line number="347" hits="2"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="264" hits="8"/>
+            <line number="265" hits="8"/>
+            <line number="266" hits="8"/>
+            <line number="267" hits="8"/>
+            <line number="268" hits="8"/>
+            <line number="269" hits="8"/>
+            <line number="270" hits="8"/>
+            <line number="271" hits="8"/>
+            <line number="272" hits="8"/>
+            <line number="273" hits="8"/>
+            <line number="274" hits="8"/>
+            <line number="275" hits="8"/>
+            <line number="276" hits="8"/>
+            <line number="277" hits="8"/>
+            <line number="278" hits="8"/>
+            <line number="279" hits="8"/>
+            <line number="280" hits="8"/>
+            <line number="281" hits="8"/>
+            <line number="282" hits="8"/>
+            <line number="283" hits="8"/>
+            <line number="284" hits="8"/>
+            <line number="285" hits="8"/>
+            <line number="286" hits="8"/>
+            <line number="287" hits="8"/>
+            <line number="288" hits="8"/>
+            <line number="289" hits="8"/>
+            <line number="290" hits="8"/>
+            <line number="291" hits="8"/>
+            <line number="292" hits="8"/>
+            <line number="293" hits="8"/>
+            <line number="294" hits="8"/>
+            <line number="295" hits="8"/>
+            <line number="296" hits="8"/>
+            <line number="297" hits="8"/>
+            <line number="298" hits="8"/>
+            <line number="299" hits="8"/>
+            <line number="300" hits="8"/>
+            <line number="301" hits="8"/>
+            <line number="302" hits="8"/>
+            <line number="303" hits="8"/>
+            <line number="304" hits="8"/>
+            <line number="305" hits="8"/>
+            <line number="306" hits="8"/>
+            <line number="307" hits="8"/>
+            <line number="308" hits="8"/>
+            <line number="309" hits="8"/>
+            <line number="310" hits="8"/>
+            <line number="311" hits="8"/>
+            <line number="312" hits="8"/>
+            <line number="313" hits="8"/>
+            <line number="314" hits="8"/>
+            <line number="315" hits="8"/>
+            <line number="316" hits="8"/>
+            <line number="317" hits="8"/>
+            <line number="318" hits="8"/>
+            <line number="319" hits="8"/>
+            <line number="320" hits="8"/>
+            <line number="321" hits="8"/>
+            <line number="322" hits="8"/>
+            <line number="323" hits="8"/>
+            <line number="324" hits="8"/>
+            <line number="325" hits="8"/>
+            <line number="326" hits="8"/>
+            <line number="327" hits="8"/>
+            <line number="328" hits="8"/>
+            <line number="329" hits="8"/>
+            <line number="330" hits="8"/>
+            <line number="331" hits="8"/>
+            <line number="332" hits="8"/>
+            <line number="333" hits="8"/>
+            <line number="343" hits="2"/>
+            <line number="344" hits="2"/>
+            <line number="345" hits="2"/>
+            <line number="346" hits="2"/>
+            <line number="347" hits="2"/>
           </lines>
         </class>
       </classes>

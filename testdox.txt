@@ -1,22 +1,22 @@
 Command (Tests\Feature\Playground\Directory\Console\Commands\About\Command)
  [x] Command about displays package information and succeed with code 0
 
-Instance (Tests\Feature\Playground\Directory\Location\Instance)
+Model (Tests\Feature\Playground\Directory\Models\Location\Model)
  [x] Model instance
  [x] Verify model relationships
  [x] Factory create
 
-Instance (Tests\Feature\Playground\Directory\Sublocation\Instance)
+Model (Tests\Feature\Playground\Directory\Models\Sublocation\Model)
  [x] Model instance
  [x] Verify model relationships
  [x] Factory create
 
-Instance (Tests\Unit\Playground\Directory\Location\Instance)
+Model (Tests\Unit\Tests\Feature\Playground\Directory\Models\Location\Model)
  [x] Model instance
  [x] Verify model relationships
  [x] Model factory make
 
-Instance (Tests\Unit\Playground\Directory\Sublocation\Instance)
+Model (Tests\Unit\Tests\Feature\Playground\Directory\Models\Sublocation\Model)
  [x] Model instance
  [x] Verify model relationships
  [x] Model factory make
