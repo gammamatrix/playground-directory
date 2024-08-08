@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="1" branch-rate="0" lines-covered="405" lines-valid="405" branches-covered="0" branches-valid="0" complexity="25" version="0.4" timestamp="1723145965">
+<coverage line-rate="1" branch-rate="0" lines-covered="407" lines-valid="407" branches-covered="0" branches-valid="0" complexity="25" version="0.4" timestamp="1723146536">
   <sources>
     <source>/app/src</source>
   </sources>
@@ -874,19 +874,21 @@
                 <line number="74" hits="25"/>
                 <line number="75" hits="25"/>
                 <line number="76" hits="25"/>
-                <line number="79" hits="25"/>
+                <line number="77" hits="25"/>
+                <line number="78" hits="25"/>
+                <line number="81" hits="25"/>
               </lines>
             </method>
             <method name="about" signature="" line-rate="1" branch-rate="0" complexity="5">
               <lines>
-                <line number="84" hits="25"/>
-                <line number="85" hits="25"/>
+                <line number="86" hits="25"/>
                 <line number="87" hits="25"/>
                 <line number="89" hits="25"/>
-                <line number="90" hits="25"/>
                 <line number="91" hits="25"/>
                 <line number="92" hits="25"/>
                 <line number="93" hits="25"/>
+                <line number="94" hits="25"/>
+                <line number="95" hits="25"/>
               </lines>
             </method>
           </methods>
@@ -912,15 +914,17 @@
             <line number="74" hits="25"/>
             <line number="75" hits="25"/>
             <line number="76" hits="25"/>
-            <line number="79" hits="25"/>
-            <line number="84" hits="25"/>
-            <line number="85" hits="25"/>
+            <line number="77" hits="25"/>
+            <line number="78" hits="25"/>
+            <line number="81" hits="25"/>
+            <line number="86" hits="25"/>
             <line number="87" hits="25"/>
             <line number="89" hits="25"/>
-            <line number="90" hits="25"/>
             <line number="91" hits="25"/>
             <line number="92" hits="25"/>
             <line number="93" hits="25"/>
+            <line number="94" hits="25"/>
+            <line number="95" hits="25"/>
           </lines>
         </class>
       </classes>
