@@ -21,6 +21,10 @@ class ModelTest extends ModelCase
      * @var array<string, array<string, mixed>> Test has many relationships.
      */
     protected array $hasMany = [
+        'revisions' => [
+            'key' => 'location_id',
+            'modelClass' => \Playground\Directory\Models\LocationRevision::class,
+        ],
         'sublocations' => [
             'key' => 'location_id',
             'modelClass' => \Playground\Directory\Models\Sublocation::class,

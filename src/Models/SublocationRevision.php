@@ -6,18 +6,20 @@
 declare(strict_types=1);
 namespace Playground\Directory\Models;
 
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Playground\Models\Model;
 
 /**
- * \Playground\Directory\Models\Location
+ * \Playground\Directory\Models\SublocationRevision
  *
  * @property string $id
- * @property ?string $location_type
+ * @property ?string $sublocation_type
  * @property ?scalar $created_by_id
  * @property ?scalar $modified_by_id
  * @property ?scalar $owned_by_id
  * @property ?string $parent_id
+ * @property ?string $sublocation_id
+ * @property ?string $location_id
  * @property ?string $matrix_id
  * @property ?Carbon $created_at
  * @property ?Carbon $updated_at
@@ -102,9 +104,9 @@ use Playground\Models\Model;
  * @property ?array $options
  * @property ?array $sources
  */
-class Location extends Model
+class SublocationRevision extends Model
 {
-    protected $table = 'directory_locations';
+    protected $table = 'directory_sublocation_revisions';
 
     /**
      * The default values for attributes.
@@ -112,11 +114,13 @@ class Location extends Model
      * @var array<string, mixed>
      */
     protected $attributes = [
-        'location_type' => null,
+        'sublocation_type' => null,
         'created_by_id' => null,
         'modified_by_id' => null,
         'owned_by_id' => null,
         'parent_id' => null,
+        'sublocation_id' => null,
+        'location_id' => null,
         'matrix_id' => null,
         'created_at' => null,
         'updated_at' => null,
@@ -208,9 +212,11 @@ class Location extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'location_type',
+        'sublocation_type',
         'owned_by_id',
         'parent_id',
+        'sublocation_id',
+        'location_id',
         'matrix_id',
         'canceled_at',
         'closed_at',
@@ -299,7 +305,7 @@ class Location extends Model
     protected function casts(): array
     {
         return [
-            'location_type' => 'string',
+            'sublocation_type' => 'string',
             'created_at' => 'datetime',
             'updated_at' => 'datetime',
             'deleted_at' => 'datetime',
@@ -386,30 +392,30 @@ class Location extends Model
     }
 
     /**
-     * The revisions of the location.
+     * The sublocation of the revision.
      *
-     * @return HasMany<LocationRevision>
+     * @return HasOne<Sublocation>
      */
-    public function revisions(): HasMany
+    public function sublocation(): HasOne
     {
-        return $this->hasMany(
-            LocationRevision::class,
-            'location_id',
-            'id'
+        return $this->hasOne(
+            Sublocation::class,
+            'id',
+            'sublocation_id'
         );
     }
 
     /**
-     * The sublocations of the location.
+     * The location of the sublocation revisoin
      *
-     * @return HasMany<Sublocation>
+     * @return HasOne<Location>
      */
-    public function sublocations(): HasMany
+    public function location(): HasOne
     {
-        return $this->hasMany(
-            Sublocation::class,
-            'location_id',
-            'id'
+        return $this->hasOne(
+            Location::class,
+            'id',
+            'location_id'
         );
     }
 }

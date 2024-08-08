@@ -8,21 +8,21 @@ namespace Database\Factories\Playground\Directory\Models;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
-use Playground\Directory\Models\Location;
+use Playground\Directory\Models\SublocationRevision;
 
 /**
- * \Database\Factories\Playground\Directory\Models\LocationFactory
+ * \Database\Factories\Playground\Directory\Models\SublocationRevisionFactory
  *
- * @extends Factory<Location>
+ * @extends Factory<SublocationRevision>
  */
-class LocationFactory extends Factory
+class SublocationRevisionFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
-     * @var class-string<Location>
+     * @var class-string<SublocationRevision>
      */
-    protected $model = Location::class;
+    protected $model = SublocationRevision::class;
 
     /**
      * Define the model's default state.
@@ -47,7 +47,7 @@ class LocationFactory extends Factory
     // States: flags
 
     /**
-     * @return Factory<Location>
+     * @return Factory<SublocationRevision>
      */
     public function locked(): Factory
     {
@@ -57,7 +57,7 @@ class LocationFactory extends Factory
     }
 
     /**
-     * @return Factory<Location>
+     * @return Factory<SublocationRevision>
      */
     public function published(): Factory
     {

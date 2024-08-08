@@ -6,6 +6,7 @@
 declare(strict_types=1);
 namespace Playground\Directory\Models;
 
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Playground\Models\Model;
 
@@ -48,6 +49,7 @@ use Playground\Models\Model;
  * @property int $status
  * @property int $rank
  * @property int $size
+ * @property int $revision
  * @property ?array $matrix
  * @property ?int $x
  * @property ?int $y
@@ -75,10 +77,12 @@ use Playground\Models\Model;
  * @property bool $problem
  * @property bool $published
  * @property bool $released
- * @property bool $retired
  * @property bool $resolved
+ * @property bool $retired
+ * @property bool $sitemap
  * @property bool $suspended
  * @property bool $unknown
+ * @property string $locale
  * @property string $label
  * @property string $title
  * @property string $byline
@@ -145,6 +149,7 @@ class Sublocation extends Model
         'status' => 0,
         'rank' => 0,
         'size' => 0,
+        'revision' => false,
         'matrix' => '{}',
         'x' => null,
         'y' => null,
@@ -172,10 +177,12 @@ class Sublocation extends Model
         'problem' => false,
         'published' => false,
         'released' => false,
-        'retired' => false,
         'resolved' => false,
+        'retired' => false,
+        'sitemap' => false,
         'suspended' => false,
         'unknown' => false,
+        'locale' => '',
         'label' => '',
         'title' => '',
         'byline' => '',
@@ -261,10 +268,12 @@ class Sublocation extends Model
         'problem',
         'published',
         'released',
-        'retired',
         'resolved',
+        'retired',
+        'sitemap',
         'suspended',
         'unknown',
+        'locale',
         'label',
         'title',
         'byline',
@@ -323,6 +332,7 @@ class Sublocation extends Model
             'status' => 'integer',
             'rank' => 'integer',
             'size' => 'integer',
+            'revision' => 'integer',
             'matrix' => 'array',
             'x' => 'integer',
             'y' => 'integer',
@@ -350,10 +360,12 @@ class Sublocation extends Model
             'problem' => 'boolean',
             'published' => 'boolean',
             'released' => 'boolean',
-            'retired' => 'boolean',
             'resolved' => 'boolean',
+            'retired' => 'boolean',
+            'sitemap' => 'boolean',
             'suspended' => 'boolean',
             'unknown' => 'boolean',
+            'locale' => 'string',
             'label' => 'string',
             'title' => 'string',
             'byline' => 'string',
@@ -378,7 +390,7 @@ class Sublocation extends Model
     }
 
     /**
-     * The location of the sublocation.
+     * The location of the sublocation
      *
      * @return HasOne<Location>
      */
@@ -388,6 +400,20 @@ class Sublocation extends Model
             Location::class,
             'id',
             'location_id'
+        );
+    }
+
+    /**
+     * The revisions of the sublocation.
+     *
+     * @return HasMany<SublocationRevision>
+     */
+    public function revisions(): HasMany
+    {
+        return $this->hasMany(
+            SublocationRevision::class,
+            'location_id',
+            'id'
         );
     }
 }

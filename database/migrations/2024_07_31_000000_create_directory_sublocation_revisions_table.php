@@ -11,7 +11,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 /**
- * \Playground\Directory\Models\Location
+ * \Playground\Directory\Models\SublocationRevision
  */
 return new class() extends Migration
 {
@@ -20,7 +20,7 @@ return new class() extends Migration
      */
     public function up(): void
     {
-        Schema::create('directory_locations', function (Blueprint $table) {
+        Schema::create('directory_sublocation_revisions', function (Blueprint $table) {
 
             // Primary key
 
@@ -28,11 +28,13 @@ return new class() extends Migration
 
             // IDs
 
-            $table->string('location_type')->nullable()->index();
+            $table->string('sublocation_type')->nullable()->index();
             $table->uuid('created_by_id')->nullable()->index();
             $table->uuid('modified_by_id')->nullable()->index();
             $table->uuid('owned_by_id')->nullable()->index();
             $table->uuid('parent_id')->nullable()->index();
+            $table->uuid('sublocation_id')->nullable()->index();
+            $table->uuid('location_id')->nullable()->index();
             $table->uuid('matrix_id')->nullable()->index();
 
             // Dates
@@ -149,6 +151,6 @@ return new class() extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('directory_locations');
+        Schema::dropIfExists('directory_sublocation_revisions');
     }
 };

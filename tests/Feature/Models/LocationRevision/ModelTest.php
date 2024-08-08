@@ -4,28 +4,18 @@
  */
 
 declare(strict_types=1);
-namespace Tests\Feature\Playground\Directory\Models\Sublocation;
+namespace Tests\Feature\Playground\Directory\Models\LocationRevision;
 
 use Tests\Feature\Playground\Directory\Models\ModelCase;
 
 /**
- * \Tests\Feature\Playground\Directory\Models\Sublocation\ModelTest
+ * \Tests\Feature\Playground\Directory\Models\LocationRevision\ModelTest
  */
 class ModelTest extends ModelCase
 {
-    protected string $modelClass = \Playground\Directory\Models\Sublocation::class;
+    protected string $modelClass = \Playground\Directory\Models\LocationRevision::class;
 
     protected bool $hasRelationships = true;
-
-    /**
-     * @var array<string, array<string, mixed>> Test has many relationships.
-     */
-    protected array $hasMany = [
-        'revisions' => [
-            'key' => 'location_id',
-            'modelClass' => \Playground\Directory\Models\SublocationRevision::class,
-        ],
-    ];
 
     /**
      * @var array<string, array<string, mixed>> Test has one relationships.
@@ -49,7 +39,7 @@ class ModelTest extends ModelCase
         'parent' => [
             'key' => 'parent_id',
             'rule' => 'create',
-            'modelClass' => \Playground\Directory\Models\Sublocation::class,
+            'modelClass' => \Playground\Directory\Models\LocationRevision::class,
         ],
         'location' => [
             'key' => 'location_id',

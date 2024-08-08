@@ -6,11 +6,11 @@
 declare(strict_types=1);
 namespace Playground\Directory\Models;
 
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Playground\Models\Model;
 
 /**
- * \Playground\Directory\Models\Location
+ * \Playground\Directory\Models\LocationRevision
  *
  * @property string $id
  * @property ?string $location_type
@@ -18,6 +18,7 @@ use Playground\Models\Model;
  * @property ?scalar $modified_by_id
  * @property ?scalar $owned_by_id
  * @property ?string $parent_id
+ * @property ?string $location_id
  * @property ?string $matrix_id
  * @property ?Carbon $created_at
  * @property ?Carbon $updated_at
@@ -102,9 +103,9 @@ use Playground\Models\Model;
  * @property ?array $options
  * @property ?array $sources
  */
-class Location extends Model
+class LocationRevision extends Model
 {
-    protected $table = 'directory_locations';
+    protected $table = 'directory_location_revisions';
 
     /**
      * The default values for attributes.
@@ -117,6 +118,7 @@ class Location extends Model
         'modified_by_id' => null,
         'owned_by_id' => null,
         'parent_id' => null,
+        'location_id' => null,
         'matrix_id' => null,
         'created_at' => null,
         'updated_at' => null,
@@ -211,6 +213,7 @@ class Location extends Model
         'location_type',
         'owned_by_id',
         'parent_id',
+        'location_id',
         'matrix_id',
         'canceled_at',
         'closed_at',
@@ -386,30 +389,16 @@ class Location extends Model
     }
 
     /**
-     * The revisions of the location.
+     * The location of the revision.
      *
-     * @return HasMany<LocationRevision>
+     * @return HasOne<Location>
      */
-    public function revisions(): HasMany
+    public function location(): HasOne
     {
-        return $this->hasMany(
-            LocationRevision::class,
-            'location_id',
-            'id'
-        );
-    }
-
-    /**
-     * The sublocations of the location.
-     *
-     * @return HasMany<Sublocation>
-     */
-    public function sublocations(): HasMany
-    {
-        return $this->hasMany(
-            Sublocation::class,
-            'location_id',
-            'id'
+        return $this->hasOne(
+            Location::class,
+            'id',
+            'location_id'
         );
     }
 }

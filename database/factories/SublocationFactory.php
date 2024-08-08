@@ -43,4 +43,26 @@ class SublocationFactory extends Factory
             'summary' => $this->faker->sentence(3),
         ];
     }
+
+    // States: flags
+
+    /**
+     * @return Factory<Sublocation>
+     */
+    public function locked(): Factory
+    {
+        return $this->state(fn (array $attributes) => [
+            'locked' => true,
+        ]);
+    }
+
+    /**
+     * @return Factory<Sublocation>
+     */
+    public function published(): Factory
+    {
+        return $this->state(fn (array $attributes) => [
+            'published' => true,
+        ]);
+    }
 }
