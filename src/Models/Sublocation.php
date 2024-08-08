@@ -412,7 +412,7 @@ class Sublocation extends Model
     {
         return $this->hasMany(
             SublocationRevision::class,
-            'location_id',
+            'sublocation_id',
             'id'
         );
     }

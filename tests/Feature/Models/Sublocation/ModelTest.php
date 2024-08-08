@@ -22,7 +22,7 @@ class ModelTest extends ModelCase
      */
     protected array $hasMany = [
         'revisions' => [
-            'key' => 'location_id',
+            'key' => 'sublocation_id',
             'modelClass' => \Playground\Directory\Models\SublocationRevision::class,
         ],
     ];
