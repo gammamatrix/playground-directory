@@ -90,7 +90,7 @@ use Playground\Models\Model;
  * @property string $introduction
  * @property ?string $content
  * @property ?string $summary
- * @property string $phone
+ * @property ?string $phone
  * @property string $icon
  * @property string $image
  * @property string $avatar
@@ -190,7 +190,7 @@ class Location extends Model
         'introduction' => '',
         'content' => null,
         'summary' => null,
-        'phone' => '',
+        'phone' => null,
         'icon' => '',
         'image' => '',
         'avatar' => '',

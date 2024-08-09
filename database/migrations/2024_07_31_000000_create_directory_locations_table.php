@@ -124,7 +124,7 @@ return new class() extends Migration
             $table->string('introduction', 512)->default('');
             $table->mediumText('content')->nullable();
             $table->mediumText('summary')->nullable();
-            $table->string('phone', 32)->default('');
+            $table->string('phone')->nullable();
 
             // Ui
 

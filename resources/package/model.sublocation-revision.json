@@ -133,7 +133,7 @@
         "introduction": "",
         "content": null,
         "summary": null,
-        "phone": "",
+        "phone": null,
         "icon": "",
         "image": "",
         "avatar": "",
@@ -2384,11 +2384,9 @@
                 "icon": "",
                 "html": false,
                 "index": false,
-                "nullable": false,
+                "nullable": true,
                 "readOnly": false,
-                "type": "string",
-                "size": 32,
-                "default": ""
+                "type": "string"
             }
         },
         "permissions": {
