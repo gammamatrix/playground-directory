@@ -92,6 +92,7 @@ use Playground\Models\Model;
  * @property string $introduction
  * @property ?string $content
  * @property ?string $summary
+ * @property string $phone
  * @property string $icon
  * @property string $image
  * @property string $avatar
@@ -192,6 +193,7 @@ class Sublocation extends Model
         'introduction' => '',
         'content' => null,
         'summary' => null,
+        'phone' => '',
         'icon' => '',
         'image' => '',
         'avatar' => '',
@@ -283,6 +285,7 @@ class Sublocation extends Model
         'introduction',
         'content',
         'summary',
+        'phone',
         'icon',
         'image',
         'avatar',
@@ -375,6 +378,7 @@ class Sublocation extends Model
             'introduction' => 'string',
             'content' => 'string',
             'summary' => 'string',
+            'phone' => 'string',
             'icon' => 'string',
             'image' => 'string',
             'avatar' => 'string',
