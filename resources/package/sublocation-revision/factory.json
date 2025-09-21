@@ -1,0 +1,16 @@
+{
+    "class": "SublocationRevisionFactory",
+    "config": "playground-directory",
+    "fqdn": "Database/Factories/Database/Factories/Playground/Directory/Models/SublocationRevisionFactory",
+    "module": "Directory",
+    "module_slug": "directory",
+    "name": "SublocationRevisionFactory",
+    "namespace": "Database/Factories/Playground/Directory/Models",
+    "organization": "Playground",
+    "package": "playground-directory",
+    "model": "SublocationRevision",
+    "model_fqdn": "Playground/Directory/Models/SublocationRevision",
+    "recipe": "directory",
+    "type": "playground-model",
+    "models": []
+}

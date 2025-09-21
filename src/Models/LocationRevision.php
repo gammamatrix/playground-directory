@@ -1,12 +1,17 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Playground\Directory\Models;
 
+use Database\Factories\Playground\Directory\Models\LocationRevisionFactory;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Support\Carbon;
 use Playground\Models\Model;
 
 /**
@@ -49,17 +54,17 @@ use Playground\Models\Model;
  * @property int $rank
  * @property int $size
  * @property int $revision
- * @property ?array $matrix
+ * @property ?array<string, mixed> $matrix
  * @property ?int $x
  * @property ?int $y
  * @property ?int $z
- * @property ?double $r
- * @property ?double $theta
- * @property ?double $rho
- * @property ?double $phi
- * @property ?double $elevation
- * @property ?double $latitude
- * @property ?double $longitude
+ * @property ?float $r
+ * @property ?float $theta
+ * @property ?float $rho
+ * @property ?float $phi
+ * @property ?float $elevation
+ * @property ?float $latitude
+ * @property ?float $longitude
  * @property bool $active
  * @property bool $canceled
  * @property bool $closed
@@ -95,24 +100,22 @@ use Playground\Models\Model;
  * @property string $icon
  * @property string $image
  * @property string $avatar
- * @property ?array $ui
- * @property ?array $address
- * @property ?array $assets
- * @property ?array $contact
- * @property ?array $meta
- * @property ?array $notes
- * @property ?array $options
- * @property ?array $sources
+ * @property ?array<string, mixed> $ui
+ * @property ?array<string, mixed> $address
+ * @property ?array<string, mixed> $assets
+ * @property ?array<string, mixed> $contact
+ * @property ?array<string, mixed> $meta
+ * @property ?array<int, array<string, mixed>> $notes
+ * @property ?array<string, mixed> $options
+ * @property ?array<string, mixed> $sources
  */
 class LocationRevision extends Model
 {
+    /** @use HasFactory<LocationRevisionFactory> */
+    use HasFactory;
+
     protected $table = 'directory_location_revisions';
 
-    /**
-     * The default values for attributes.
-     *
-     * @var array<string, mixed>
-     */
     protected $attributes = [
         'location_type' => null,
         'created_by_id' => null,
@@ -206,11 +209,6 @@ class LocationRevision extends Model
         'sources' => '{}',
     ];
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
     protected $fillable = [
         'location_type',
         'owned_by_id',
@@ -297,11 +295,6 @@ class LocationRevision extends Model
         'sources',
     ];
 
-    /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
     protected function casts(): array
     {
         return [
@@ -395,7 +388,7 @@ class LocationRevision extends Model
     /**
      * The location of the revision.
      *
-     * @return HasOne<Location>
+     * @return HasOne<Location, $this>
      */
     public function location(): HasOne
     {

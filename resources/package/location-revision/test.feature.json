@@ -1,0 +1,22 @@
+{
+    "class": "ModelTest",
+    "config": "playground-directory",
+    "extends": "ModelCase",
+    "fqdn": "Tests/Feature/Playground/Directory/Models/LocationRevision/ModelTest",
+    "model": "LocationRevision",
+    "model_fqdn": "Playground/Directory/Models/LocationRevision",
+    "module": "Directory",
+    "module_slug": "directory",
+    "name": "LocationRevision",
+    "namespace": "Tests/Feature/Playground/Directory/Models/LocationRevision",
+    "organization": "Playground",
+    "package": "playground-directory",
+    "playground": true,
+    "suite": "feature",
+    "type": "model",
+    "uses": [
+        "Tests/Feature/Playground/Directory/Models/ModelCase"
+    ],
+    "models": [],
+    "package_providers": []
+}

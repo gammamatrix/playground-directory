@@ -1,0 +1,17 @@
+{
+    "class": "2024_07_31_000000_create_directory_sublocation_revisions_table",
+    "config": "playground-directory",
+    "model": "SublocationRevision",
+    "model_fqdn": "Playground/Directory/Models/SublocationRevision",
+    "module": "Directory",
+    "module_slug": "directory",
+    "name": "SublocationRevision",
+    "namespace": "Playground/Directory",
+    "organization": "Playground",
+    "package": "playground-directory",
+    "table": "directory_sublocation_revisions",
+    "type": "playground-model",
+    "models": [],
+    "create": true,
+    "update": false
+}

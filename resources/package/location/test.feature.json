@@ -1,0 +1,22 @@
+{
+    "class": "ModelTest",
+    "config": "playground-directory",
+    "extends": "ModelCase",
+    "fqdn": "Tests/Feature/Playground/Directory/Models/Location/ModelTest",
+    "model": "Location",
+    "model_fqdn": "Playground/Directory/Models/Location",
+    "module": "Directory",
+    "module_slug": "directory",
+    "name": "Location",
+    "namespace": "Tests/Feature/Playground/Directory/Models/Location",
+    "organization": "Playground",
+    "package": "playground-directory",
+    "playground": true,
+    "suite": "feature",
+    "type": "model",
+    "uses": [
+        "Tests/Feature/Playground/Directory/Models/ModelCase"
+    ],
+    "models": [],
+    "package_providers": []
+}

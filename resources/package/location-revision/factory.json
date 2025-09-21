@@ -1,0 +1,16 @@
+{
+    "class": "LocationRevisionFactory",
+    "config": "playground-directory",
+    "fqdn": "Database/Factories/Database/Factories/Playground/Directory/Models/LocationRevisionFactory",
+    "module": "Directory",
+    "module_slug": "directory",
+    "name": "LocationRevisionFactory",
+    "namespace": "Database/Factories/Playground/Directory/Models",
+    "organization": "Playground",
+    "package": "playground-directory",
+    "model": "LocationRevision",
+    "model_fqdn": "Playground/Directory/Models/LocationRevision",
+    "recipe": "directory",
+    "type": "playground-model",
+    "models": []
+}

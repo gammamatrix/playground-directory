@@ -1,23 +1,23 @@
 {
-    "class": "Location",
+    "class": "Sublocation",
     "config": "playground-directory",
-    "fqdn": "Playground/Directory/Models/Location",
+    "fqdn": "Playground/Directory/Models/Sublocation",
     "module": "Directory",
     "module_slug": "directory",
-    "name": "Location",
+    "name": "Sublocation",
     "namespace": "Playground/Directory",
     "organization": "Playground",
     "package": "playground-directory",
-    "model": "Location",
+    "model": "Sublocation",
     "model_attribute": "title",
     "model_attribute_required": true,
-    "model_plural": "Locations",
-    "model_singular": "Location",
-    "model_slug": "location",
-    "model_slug_plural": "locations",
+    "model_plural": "Sublocations",
+    "model_singular": "Sublocation",
+    "model_slug": "sublocation",
+    "model_slug_plural": "sublocations",
     "recipe": "directory",
     "type": "playground-model",
-    "table": "directory_locations",
+    "table": "directory_sublocations",
     "perPage": null,
     "controller": true,
     "factory": true,
@@ -30,20 +30,21 @@
     "test": true,
     "extends": "Model",
     "implements": [],
-    "HasOne": [],
+    "HasOne": {
+        "location": {
+            "comment": "The location of the sublocation",
+            "accessor": "location",
+            "related": "Location",
+            "foreignKey": "id",
+            "localKey": "location_id"
+        }
+    },
     "HasMany": {
         "revisions": {
-            "comment": "The revisions of the location.",
+            "comment": "The revisions of the sublocation.",
             "accessor": "revisions",
-            "related": "LocationRevision",
-            "foreignKey": "location_id",
-            "localKey": "id"
-        },
-        "sublocations": {
-            "comment": "The sublocations of the location.",
-            "accessor": "sublocations",
-            "related": "Sublocation",
-            "foreignKey": "location_id",
+            "related": "SublocationRevision",
+            "foreignKey": "sublocation_id",
             "localKey": "id"
         }
     },
@@ -54,11 +55,12 @@
         }
     },
     "attributes": {
-        "location_type": null,
+        "sublocation_type": null,
         "created_by_id": null,
         "modified_by_id": null,
         "owned_by_id": null,
         "parent_id": null,
+        "location_id": null,
         "matrix_id": null,
         "created_at": null,
         "updated_at": null,
@@ -145,7 +147,7 @@
         "sources": "{}"
     },
     "casts": {
-        "location_type": "string",
+        "sublocation_type": "string",
         "created_at": "datetime",
         "updated_at": "datetime",
         "deleted_at": "datetime",
@@ -231,9 +233,10 @@
         "sources": "array"
     },
     "fillable": [
-        "location_type",
+        "sublocation_type",
         "owned_by_id",
         "parent_id",
+        "location_id",
         "matrix_id",
         "canceled_at",
         "closed_at",
@@ -326,8 +329,8 @@
                 "type": "string"
             },
             {
-                "column": "location_type",
-                "label": "Location Type",
+                "column": "sublocation_type",
+                "label": "Sublocation Type",
                 "icon": "",
                 "nullable": true,
                 "unsigned": true,
@@ -360,6 +363,14 @@
             {
                 "column": "parent_id",
                 "label": "Parent id",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "uuid"
+            },
+            {
+                "column": "location_id",
+                "label": "Location id",
                 "icon": "",
                 "nullable": true,
                 "unsigned": true,
@@ -1070,8 +1081,8 @@
             "type": "string"
         },
         {
-            "column": "location_type",
-            "label": "Location Type",
+            "column": "sublocation_type",
+            "label": "Sublocation Type",
             "icon": "",
             "nullable": false,
             "type": "string"
@@ -1100,6 +1111,13 @@
         {
             "column": "parent_id",
             "label": "Parent id",
+            "icon": "",
+            "nullable": false,
+            "type": "uuid"
+        },
+        {
+            "column": "location_id",
+            "label": "Location id",
             "icon": "",
             "nullable": false,
             "type": "uuid"
@@ -1694,7 +1712,7 @@
         }
     ],
     "create": {
-        "migration": "2024_07_31_000000_create_directory_locations_table",
+        "migration": "2024_07_31_000000_create_directory_sublocations_table",
         "primary": "uuid",
         "timestamps": true,
         "softDeletes": true,
@@ -1704,9 +1722,9 @@
             "with": false
         },
         "ids": {
-            "location_type": {
-                "column": "location_type",
-                "label": "Location Type",
+            "sublocation_type": {
+                "column": "sublocation_type",
+                "label": "Sublocation Type",
                 "description": "",
                 "foreign": null,
                 "icon": "",
@@ -1766,6 +1784,21 @@
                 "label": "Parent id",
                 "description": "",
                 "foreign": null,
+                "icon": "",
+                "index": true,
+                "nullable": true,
+                "readOnly": false,
+                "unsigned": false,
+                "type": "uuid"
+            },
+            "location_id": {
+                "column": "location_id",
+                "label": "Location id",
+                "description": "",
+                "foreign": {
+                    "references": "id",
+                    "on": "directory_locations"
+                },
                 "icon": "",
                 "index": true,
                 "nullable": true,
@@ -1897,17 +1930,6 @@
                 "readOnly": false,
                 "type": "dateTime"
             },
-            "resumed_at": {
-                "column": "resumed_at",
-                "label": "Resumed at",
-                "description": "",
-                "icon": "",
-                "html": false,
-                "index": false,
-                "nullable": true,
-                "readOnly": false,
-                "type": "dateTime"
-            },
             "resolved_at": {
                 "column": "resolved_at",
                 "label": "Resolved at",
@@ -1915,6 +1937,17 @@
                 "icon": "",
                 "html": false,
                 "index": true,
+                "nullable": true,
+                "readOnly": false,
+                "type": "dateTime"
+            },
+            "resumed_at": {
+                "column": "resumed_at",
+                "label": "Resumed at",
+                "description": "",
+                "icon": "",
+                "html": false,
+                "index": false,
                 "nullable": true,
                 "readOnly": false,
                 "type": "dateTime"
@@ -2774,7 +2807,11 @@
         }
     },
     "uses": [
+        "Illuminate/Database/Eloquent/Relations/HasOne",
         "Illuminate/Database/Eloquent/Relations/HasMany",
-        "Playground/Models/Model"
+        "Playground/Models/Model",
+        "Illuminate/Database/Eloquent/Factories/HasFactory",
+        "Database/Factories/Playground/Directory/Models/SublocationFactory",
+        "Illuminate/Support/Carbon"
     ]
 }

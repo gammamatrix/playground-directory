@@ -1,0 +1,20 @@
+{
+    "class": "CommandTest",
+    "config": "playground-directory",
+    "extends": "",
+    "fqdn": "Tests/Feature/Playground/Directory/CommandTest",
+    "model": "",
+    "model_fqdn": "",
+    "module": "Directory",
+    "module_slug": "directory",
+    "name": "CommandTest",
+    "namespace": "Tests/Feature/Playground/Directory",
+    "organization": "Playground",
+    "package": "playground-directory",
+    "playground": true,
+    "suite": "feature",
+    "type": "command-about",
+    "uses": [],
+    "models": [],
+    "package_providers": []
+}

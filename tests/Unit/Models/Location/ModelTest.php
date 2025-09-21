@@ -1,9 +1,11 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Tests\Unit\Playground\Directory\Models\Location;
 
 use Tests\Unit\Playground\Directory\Models\ModelCase;
@@ -17,17 +19,11 @@ class ModelTest extends ModelCase
 
     protected bool $hasRelationships = true;
 
-    /**
-     * @var array<int, string> Test has many relationships.
-     */
     protected array $hasMany = [
         'revisions',
         'sublocations',
     ];
 
-    /**
-     * @var array<int, string> Test has one relationships.
-     */
     protected array $hasOne = [
         'creator',
         'modifier',

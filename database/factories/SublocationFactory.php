@@ -1,9 +1,11 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Database\Factories\Playground\Directory\Models;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -46,20 +48,14 @@ class SublocationFactory extends Factory
 
     // States: flags
 
-    /**
-     * @return Factory<Sublocation>
-     */
-    public function locked(): Factory
+    public function locked(): SublocationFactory
     {
         return $this->state(fn (array $attributes) => [
             'locked' => true,
         ]);
     }
 
-    /**
-     * @return Factory<Sublocation>
-     */
-    public function published(): Factory
+    public function published(): SublocationFactory
     {
         return $this->state(fn (array $attributes) => [
             'published' => true,

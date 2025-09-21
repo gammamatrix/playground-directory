@@ -30,9 +30,8 @@ nbproject/private/
 
 database/migrations/*.disabled
 
-resources/packages
-
 composer.lock
+package-lock.json
 
 tmp-*
 temp-*

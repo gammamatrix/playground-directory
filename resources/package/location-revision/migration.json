@@ -1,0 +1,17 @@
+{
+    "class": "2024_07_31_000000_create_directory_location_revisions_table",
+    "config": "playground-directory",
+    "model": "LocationRevision",
+    "model_fqdn": "Playground/Directory/Models/LocationRevision",
+    "module": "Directory",
+    "module_slug": "directory",
+    "name": "LocationRevision",
+    "namespace": "Playground/Directory",
+    "organization": "Playground",
+    "package": "playground-directory",
+    "table": "directory_location_revisions",
+    "type": "playground-model",
+    "models": [],
+    "create": true,
+    "update": false
+}

@@ -1,0 +1,16 @@
+{
+    "class": "LocationFactory",
+    "config": "playground-directory",
+    "fqdn": "Database/Factories/Database/Factories/Playground/Directory/Models/LocationFactory",
+    "module": "Directory",
+    "module_slug": "directory",
+    "name": "LocationFactory",
+    "namespace": "Database/Factories/Playground/Directory/Models",
+    "organization": "Playground",
+    "package": "playground-directory",
+    "model": "Location",
+    "model_fqdn": "Playground/Directory/Models/Location",
+    "recipe": "directory",
+    "type": "playground-model",
+    "models": []
+}

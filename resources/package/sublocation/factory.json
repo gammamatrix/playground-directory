@@ -1,0 +1,16 @@
+{
+    "class": "SublocationFactory",
+    "config": "playground-directory",
+    "fqdn": "Database/Factories/Database/Factories/Playground/Directory/Models/SublocationFactory",
+    "module": "Directory",
+    "module_slug": "directory",
+    "name": "SublocationFactory",
+    "namespace": "Database/Factories/Playground/Directory/Models",
+    "organization": "Playground",
+    "package": "playground-directory",
+    "model": "Sublocation",
+    "model_fqdn": "Playground/Directory/Models/Sublocation",
+    "recipe": "directory",
+    "type": "playground-model",
+    "models": []
+}

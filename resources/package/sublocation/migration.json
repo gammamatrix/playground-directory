@@ -1,0 +1,17 @@
+{
+    "class": "2024_07_31_000000_create_directory_sublocations_table",
+    "config": "playground-directory",
+    "model": "Sublocation",
+    "model_fqdn": "Playground/Directory/Models/Sublocation",
+    "module": "Directory",
+    "module_slug": "directory",
+    "name": "Sublocation",
+    "namespace": "Playground/Directory",
+    "organization": "Playground",
+    "package": "playground-directory",
+    "table": "directory_sublocations",
+    "type": "playground-model",
+    "models": [],
+    "create": true,
+    "update": false
+}

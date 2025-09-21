@@ -1,9 +1,11 @@
 <?php
+
 /**
  * Playground
  */
 
 declare(strict_types=1);
+
 namespace Tests\Feature\Playground\Directory\Models\Sublocation;
 
 use Tests\Feature\Playground\Directory\Models\ModelCase;
@@ -17,9 +19,6 @@ class ModelTest extends ModelCase
 
     protected bool $hasRelationships = true;
 
-    /**
-     * @var array<string, array<string, mixed>> Test has many relationships.
-     */
     protected array $hasMany = [
         'revisions' => [
             'key' => 'sublocation_id',
@@ -27,9 +26,6 @@ class ModelTest extends ModelCase
         ],
     ];
 
-    /**
-     * @var array<string, array<string, mixed>> Test has one relationships.
-     */
     protected array $hasOne = [
         'creator' => [
             'key' => 'created_by_id',

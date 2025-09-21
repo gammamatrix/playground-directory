@@ -1,0 +1,17 @@
+{
+    "class": "2024_07_31_000000_create_directory_locations_table",
+    "config": "playground-directory",
+    "model": "Location",
+    "model_fqdn": "Playground/Directory/Models/Location",
+    "module": "Directory",
+    "module_slug": "directory",
+    "name": "Location",
+    "namespace": "Playground/Directory",
+    "organization": "Playground",
+    "package": "playground-directory",
+    "table": "directory_locations",
+    "type": "playground-model",
+    "models": [],
+    "create": true,
+    "update": false
+}

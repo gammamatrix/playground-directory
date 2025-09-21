@@ -1,0 +1,22 @@
+{
+    "class": "ModelCase",
+    "config": "playground-directory",
+    "extends": "Playground/Test/Feature/Models/ModelCase as BaseModelCase",
+    "fqdn": "Tests/Feature/Playground/Directory/Models/Models",
+    "model": "",
+    "model_fqdn": "",
+    "module": "Directory",
+    "module_slug": "directory",
+    "name": "ModelCase",
+    "namespace": "Tests/Feature/Playground/Directory/Models",
+    "organization": "Playground",
+    "package": "playground-directory",
+    "playground": true,
+    "suite": "feature",
+    "type": "model-case",
+    "uses": [
+        "Tests/Unit/Playground/Directory/PackageProviders"
+    ],
+    "models": [],
+    "package_providers": []
+}

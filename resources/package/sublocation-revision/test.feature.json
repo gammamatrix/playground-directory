@@ -1,0 +1,22 @@
+{
+    "class": "ModelTest",
+    "config": "playground-directory",
+    "extends": "ModelCase",
+    "fqdn": "Tests/Feature/Playground/Directory/Models/SublocationRevision/ModelTest",
+    "model": "SublocationRevision",
+    "model_fqdn": "Playground/Directory/Models/SublocationRevision",
+    "module": "Directory",
+    "module_slug": "directory",
+    "name": "SublocationRevision",
+    "namespace": "Tests/Feature/Playground/Directory/Models/SublocationRevision",
+    "organization": "Playground",
+    "package": "playground-directory",
+    "playground": true,
+    "suite": "feature",
+    "type": "model",
+    "uses": [
+        "Tests/Feature/Playground/Directory/Models/ModelCase"
+    ],
+    "models": [],
+    "package_providers": []
+}
