@@ -8,6 +8,10 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Playground\Directory\Models\Sublocation;
 
+use Playground\Directory\Models\Location;
+use Playground\Directory\Models\Sublocation;
+use Playground\Directory\Models\SublocationRevision;
+use Playground\Models\User;
 use Tests\Feature\Playground\Directory\Models\ModelCase;
 
 /**
@@ -15,14 +19,14 @@ use Tests\Feature\Playground\Directory\Models\ModelCase;
  */
 class ModelTest extends ModelCase
 {
-    protected string $modelClass = \Playground\Directory\Models\Sublocation::class;
+    protected string $modelClass = Sublocation::class;
 
     protected bool $hasRelationships = true;
 
     protected array $hasMany = [
         'revisions' => [
             'key' => 'sublocation_id',
-            'modelClass' => \Playground\Directory\Models\SublocationRevision::class,
+            'modelClass' => SublocationRevision::class,
         ],
     ];
 
@@ -30,27 +34,27 @@ class ModelTest extends ModelCase
         'creator' => [
             'key' => 'created_by_id',
             'rule' => 'create',
-            'modelClass' => \Playground\Models\User::class,
+            'modelClass' => User::class,
         ],
         'modifier' => [
             'key' => 'modified_by_id',
             'rule' => 'first',
-            'modelClass' => \Playground\Models\User::class,
+            'modelClass' => User::class,
         ],
         'owner' => [
             'key' => 'owned_by_id',
             'rule' => 'first',
-            'modelClass' => \Playground\Models\User::class,
+            'modelClass' => User::class,
         ],
         'parent' => [
             'key' => 'parent_id',
             'rule' => 'create',
-            'modelClass' => \Playground\Directory\Models\Sublocation::class,
+            'modelClass' => Sublocation::class,
         ],
         'location' => [
             'key' => 'location_id',
             'rule' => 'create',
-            'modelClass' => \Playground\Directory\Models\Location::class,
+            'modelClass' => Location::class,
         ],
     ];
 }

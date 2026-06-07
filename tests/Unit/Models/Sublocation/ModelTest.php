@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Playground\Directory\Models\Sublocation;
 
+use Playground\Directory\Models\Sublocation;
 use Tests\Unit\Playground\Directory\Models\ModelCase;
 
 /**
@@ -15,7 +16,7 @@ use Tests\Unit\Playground\Directory\Models\ModelCase;
  */
 class ModelTest extends ModelCase
 {
-    protected string $modelClass = \Playground\Directory\Models\Sublocation::class;
+    protected string $modelClass = Sublocation::class;
 
     protected bool $hasRelationships = true;
 

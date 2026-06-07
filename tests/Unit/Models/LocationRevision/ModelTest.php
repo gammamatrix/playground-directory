@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Playground\Directory\Models\LocationRevision;
 
+use Playground\Directory\Models\LocationRevision;
 use Tests\Unit\Playground\Directory\Models\ModelCase;
 
 /**
@@ -15,7 +16,7 @@ use Tests\Unit\Playground\Directory\Models\ModelCase;
  */
 class ModelTest extends ModelCase
 {
-    protected string $modelClass = \Playground\Directory\Models\LocationRevision::class;
+    protected string $modelClass = LocationRevision::class;
 
     protected bool $hasRelationships = true;
 
