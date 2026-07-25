@@ -15,11 +15,12 @@
     "withFactories": true,
     "withMigrations": true,
     "withModels": true,
+    "withOpenAPI": false,
     "withPolicies": false,
     "withRequests": false,
     "withRoutes": false,
-    "withOpenAPI": false,
     "withTests": true,
+    "withTranslations": false,
     "playground": true,
     "revision": false,
     "docs_name": "",
@@ -29,14 +30,13 @@
     "model_package_name": "",
     "package_description": "Playground: Provide the Directory models for the Playground Directory System.",
     "package_homepage": "https://github.com/gammamatrix/playground-directory",
-    "package_keywords": [
-        "cms",
-        "directory",
-        "gammamatrix",
-        "laravel",
-        "playground"
-    ],
     "package_license": "MIT",
+    "packagist": "gammamatrix/playground-directory",
+    "postman_collection": "",
+    "postman_url": "",
+    "service_provider": "",
+    "type": "playground-model",
+    "version": "75.0.0",
     "package_authors": [
         {
             "name": "Jeremy Postlethwaite",
@@ -44,45 +44,47 @@
             "role": "Developer"
         }
     ],
+    "package_autoload_psr4": [],
+    "package_autoload_dev_psr4": [],
+    "package_keywords": [
+        "cms",
+        "directory",
+        "gammamatrix",
+        "laravel",
+        "playground"
+    ],
+    "package_laravel_providers": [
+        "Playground/Directory/ServiceProvider"
+    ],
+    "package_providers": [
+        "Playground/ServiceProvider",
+        "Playground/Directory/ServiceProvider"
+    ],
     "package_require": {
         "php": "^8.4",
         "gammamatrix/playground": "*",
-        "illuminate/support": "^12.0",
-        "illuminate/database": "^12.0"
+        "illuminate/support": "^13.0",
+        "illuminate/database": "^13.0"
     },
     "package_require_dev": {
         "gammamatrix/playground-test": "*",
-        "illuminate/testing": "^12.0"
+        "illuminate/testing": "^13.0"
     },
     "package_suggest": {
         "gammamatrix/playground-directory-api": "Provides an API, without a UI, to interact with the models provided in this package.",
         "gammamatrix/playground-directory-resource": "Provides a resource API and optional Blade UI to interact with the models provided in this package."
     },
-    "package_autoload_psr4": [],
-    "package_autoload_dev_psr4": [],
-    "package_providers": [
-        "Playground/ServiceProvider",
-        "Playground/Directory/ServiceProvider"
-    ],
-    "package_laravel_providers": [
-        "Playground/Directory/ServiceProvider"
-    ],
-    "packagist": "gammamatrix/playground-directory",
-    "postman_collection": "",
-    "postman_url": "",
     "controllers": [],
     "models": {
-        "Location": "resources/configurations/playground-directory/model.location.json",
-        "LocationRevision": "resources/configurations/playground-directory/model.location-revision.json",
-        "Sublocation": "resources/configurations/playground-directory/model.sublocation.json",
-        "SublocationRevision": "resources/configurations/playground-directory/model.sublocation-revision.json"
+        "Location": "resources/package/playground-directory/model.location.json",
+        "LocationRevision": "resources/package/playground-directory/model.location-revision.json",
+        "Sublocation": "resources/package/playground-directory/model.sublocation.json",
+        "SublocationRevision": "resources/package/playground-directory/model.sublocation-revision.json"
     },
     "policies": [],
     "requests": [],
     "routes": [],
     "transformers": [],
-    "uses": [],
-    "service_provider": "",
-    "type": "playground-model",
-    "version": "74.0.0"
+    "translations": [],
+    "uses": []
 }

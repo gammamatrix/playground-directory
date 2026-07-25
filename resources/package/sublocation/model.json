@@ -2807,11 +2807,11 @@
         }
     },
     "uses": [
-        "Illuminate/Database/Eloquent/Relations/HasOne",
-        "Illuminate/Database/Eloquent/Relations/HasMany",
-        "Playground/Models/Model",
-        "Illuminate/Database/Eloquent/Factories/HasFactory",
         "Database/Factories/Playground/Directory/Models/SublocationFactory",
-        "Illuminate/Support/Carbon"
+        "Illuminate/Database/Eloquent/Factories/HasFactory",
+        "Illuminate/Database/Eloquent/Relations/HasMany",
+        "Illuminate/Database/Eloquent/Relations/HasOne",
+        "Illuminate/Support/Carbon",
+        "Playground/Models/Model"
     ]
 }

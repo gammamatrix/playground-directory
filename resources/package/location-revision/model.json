@@ -2799,10 +2799,10 @@
         }
     },
     "uses": [
-        "Illuminate/Database/Eloquent/Relations/HasOne",
-        "Playground/Models/Model",
-        "Illuminate/Database/Eloquent/Factories/HasFactory",
         "Database/Factories/Playground/Directory/Models/LocationRevisionFactory",
-        "Illuminate/Support/Carbon"
+        "Illuminate/Database/Eloquent/Factories/HasFactory",
+        "Illuminate/Database/Eloquent/Relations/HasOne",
+        "Illuminate/Support/Carbon",
+        "Playground/Models/Model"
     ]
 }
