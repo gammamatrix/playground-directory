@@ -6,17 +6,17 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\Playground\Directory\Models\Sublocation;
+namespace Tests\Unit\Playground\Directory\Models\Contact;
 
-use Playground\Directory\Models\Sublocation;
+use Playground\Directory\Models\Contact;
 use Tests\Unit\Playground\Directory\Models\ModelCase;
 
 /**
- * \Tests\Unit\Playground\Directory\Models\Sublocation\ModelTest
+ * \Tests\Unit\Playground\Directory\Models\Contact\ModelTest
  */
 class ModelTest extends ModelCase
 {
-    protected string $modelClass = Sublocation::class;
+    protected string $modelClass = Contact::class;
 
     protected bool $hasRelationships = true;
 
@@ -29,6 +29,5 @@ class ModelTest extends ModelCase
         'modifier',
         'owner',
         'parent',
-        'location',
     ];
 }

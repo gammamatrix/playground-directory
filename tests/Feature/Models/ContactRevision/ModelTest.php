@@ -6,20 +6,19 @@
 
 declare(strict_types=1);
 
-namespace Tests\Feature\Playground\Directory\Models\SublocationRevision;
+namespace Tests\Feature\Playground\Directory\Models\ContactRevision;
 
-use Playground\Directory\Models\Location;
-use Playground\Directory\Models\Sublocation;
-use Playground\Directory\Models\SublocationRevision;
+use Playground\Directory\Models\Contact;
+use Playground\Directory\Models\ContactRevision;
 use Playground\Models\User;
 use Tests\Feature\Playground\Directory\Models\ModelCase;
 
 /**
- * \Tests\Feature\Playground\Directory\Models\SublocationRevision\ModelTest
+ * \Tests\Feature\Playground\Directory\Models\ContactRevision\ModelTest
  */
 class ModelTest extends ModelCase
 {
-    protected string $modelClass = SublocationRevision::class;
+    protected string $modelClass = ContactRevision::class;
 
     protected bool $hasRelationships = true;
 
@@ -42,17 +41,12 @@ class ModelTest extends ModelCase
         'parent' => [
             'key' => 'parent_id',
             'rule' => 'create',
-            'modelClass' => SublocationRevision::class,
+            'modelClass' => ContactRevision::class,
         ],
-        'sublocation' => [
-            'key' => 'sublocation_id',
+        'contact' => [
+            'key' => 'contact_id',
             'rule' => 'create',
-            'modelClass' => Sublocation::class,
-        ],
-        'location' => [
-            'key' => 'location_id',
-            'rule' => 'create',
-            'modelClass' => Location::class,
+            'modelClass' => Contact::class,
         ],
     ];
 }

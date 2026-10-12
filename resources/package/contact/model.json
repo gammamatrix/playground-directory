@@ -1,23 +1,43 @@
 {
-    "class": "SublocationRevision",
+    "class": "Contact",
     "config": "playground-directory",
-    "fqdn": "Playground/Directory/Models/SublocationRevision",
+    "fqdn": "Playground/Directory/Models/Contact",
     "module": "Directory",
+    "module_label": "Directory",
+    "module_labels": "Directories",
     "module_slug": "directory",
-    "name": "SublocationRevision",
+    "module_slugs": "directories",
+    "name": "Contact",
+    "names": "Contacts",
     "namespace": "Playground/Directory",
     "organization": "Playground",
     "package": "playground-directory",
-    "model": "SublocationRevision",
+    "model": "Contact",
     "model_attribute": "title",
     "model_attribute_required": true,
-    "model_plural": "SublocationRevisions",
-    "model_singular": "SublocationRevision",
-    "model_slug": "sublocation-revision",
-    "model_slug_plural": "sublocation-revisions",
+    "model_camel": "contact",
+    "model_camels": "contacts",
+    "model_label": "Contact",
+    "model_labels": "Contacts",
+    "model_lower": "contact",
+    "model_lowers": "contacts",
+    "model_kebab": "contact",
+    "model_kebabs": "contacts",
+    "model_plural": "",
+    "model_route_param": "contact",
+    "model_singular": "",
+    "model_slug": "contact",
+    "model_slugs": "contacts",
+    "model_slug_plural": "",
+    "model_snake": "contact",
+    "model_snakes": "contacts",
+    "model_studly": "Contact",
+    "model_studlies": "Contacts",
+    "model_variable": "contact",
+    "model_variables": "contacts",
     "recipe": "directory",
     "type": "playground-model",
-    "table": "directory_sublocation_revisions",
+    "table": "directory_contacts",
     "perPage": null,
     "controller": true,
     "factory": true,
@@ -25,28 +45,22 @@
     "playground": true,
     "policy": true,
     "requests": true,
-    "revision": true,
+    "revision": false,
     "seed": true,
     "test": true,
     "extends": "Model",
     "implements": [],
-    "HasOne": {
-        "sublocation": {
-            "comment": "The sublocation of the revision.",
-            "accessor": "sublocation",
-            "related": "Sublocation",
-            "foreignKey": "id",
-            "localKey": "sublocation_id"
-        },
-        "location": {
-            "comment": "The location of the sublocation revision",
-            "accessor": "location",
-            "related": "Location",
-            "foreignKey": "id",
-            "localKey": "location_id"
+    "HasOne": [],
+    "HasMany": {
+        "revisions": {
+            "comment": "The revisions of the contact.",
+            "accessor": "revisions",
+            "related": "ContactRevision",
+            "foreignKey": "contact_id",
+            "localKey": "id"
         }
     },
-    "HasMany": [],
+    "HasManyThrough": [],
     "scopes": {
         "sort": {
             "include": "minus",
@@ -54,13 +68,11 @@
         }
     },
     "attributes": {
-        "sublocation_type": null,
+        "contact_type": null,
         "created_by_id": null,
         "modified_by_id": null,
         "owned_by_id": null,
         "parent_id": null,
-        "sublocation_id": null,
-        "location_id": null,
         "matrix_id": null,
         "created_at": null,
         "updated_at": null,
@@ -74,8 +86,8 @@
         "postponed_at": null,
         "published_at": null,
         "released_at": null,
-        "resumed_at": null,
         "resolved_at": null,
+        "resumed_at": null,
         "suspended_at": null,
         "timer_end_at": null,
         "timer_start_at": null,
@@ -91,7 +103,7 @@
         "rank": 0,
         "size": 0,
         "revision": false,
-        "matrix": "{}",
+        "matrix": null,
         "x": null,
         "y": null,
         "z": null,
@@ -133,21 +145,22 @@
         "introduction": "",
         "content": null,
         "summary": null,
+        "email": null,
         "phone": null,
         "icon": "",
         "image": "",
         "avatar": "",
-        "ui": "{}",
-        "address": "{}",
-        "assets": "{}",
-        "contact": "{}",
-        "meta": "{}",
+        "ui": null,
+        "address": null,
+        "assets": null,
+        "contact": null,
+        "meta": null,
         "notes": "[]",
-        "options": "{}",
-        "sources": "{}"
+        "options": null,
+        "sources": null
     },
     "casts": {
-        "sublocation_type": "string",
+        "contact_type": "string",
         "created_at": "datetime",
         "updated_at": "datetime",
         "deleted_at": "datetime",
@@ -160,8 +173,8 @@
         "postponed_at": "datetime",
         "published_at": "datetime",
         "released_at": "datetime",
-        "resumed_at": "datetime",
         "resolved_at": "datetime",
+        "resumed_at": "datetime",
         "suspended_at": "datetime",
         "timer_end_at": "datetime",
         "timer_start_at": "datetime",
@@ -219,6 +232,7 @@
         "introduction": "string",
         "content": "string",
         "summary": "string",
+        "email": "string",
         "phone": "string",
         "icon": "string",
         "image": "string",
@@ -233,11 +247,9 @@
         "sources": "array"
     },
     "fillable": [
-        "sublocation_type",
+        "contact_type",
         "owned_by_id",
         "parent_id",
-        "sublocation_id",
-        "location_id",
         "matrix_id",
         "canceled_at",
         "closed_at",
@@ -248,8 +260,8 @@
         "postponed_at",
         "published_at",
         "released_at",
-        "resumed_at",
         "resolved_at",
+        "resumed_at",
         "suspended_at",
         "timer_end_at",
         "timer_start_at",
@@ -306,6 +318,7 @@
         "introduction",
         "content",
         "summary",
+        "email",
         "phone",
         "icon",
         "image",
@@ -330,8 +343,8 @@
                 "type": "string"
             },
             {
-                "column": "sublocation_type",
-                "label": "Sublocation Type",
+                "column": "contact_type",
+                "label": "Contact Type",
                 "icon": "",
                 "nullable": true,
                 "unsigned": true,
@@ -339,7 +352,7 @@
             },
             {
                 "column": "created_by_id",
-                "label": "Created by id",
+                "label": "Created by ID",
                 "icon": "",
                 "nullable": true,
                 "unsigned": true,
@@ -347,7 +360,7 @@
             },
             {
                 "column": "modified_by_id",
-                "label": "Modified by id",
+                "label": "Modified by ID",
                 "icon": "",
                 "nullable": true,
                 "unsigned": true,
@@ -355,7 +368,7 @@
             },
             {
                 "column": "owned_by_id",
-                "label": "Owned by id",
+                "label": "Owned by ID",
                 "icon": "",
                 "nullable": true,
                 "unsigned": true,
@@ -364,22 +377,6 @@
             {
                 "column": "parent_id",
                 "label": "Parent id",
-                "icon": "",
-                "nullable": true,
-                "unsigned": true,
-                "type": "uuid"
-            },
-            {
-                "column": "sublocation_id",
-                "label": "Sublocation id",
-                "icon": "",
-                "nullable": true,
-                "unsigned": true,
-                "type": "uuid"
-            },
-            {
-                "column": "location_id",
-                "label": "Location id",
                 "icon": "",
                 "nullable": true,
                 "unsigned": true,
@@ -492,16 +489,16 @@
                 "type": "datetime"
             },
             {
-                "column": "resumed_at",
-                "label": "Resumed at",
+                "column": "resolved_at",
+                "label": "Resolved at",
                 "icon": "",
                 "nullable": true,
                 "unsigned": true,
                 "type": "datetime"
             },
             {
-                "column": "resolved_at",
-                "label": "Resolved at",
+                "column": "resumed_at",
+                "label": "Resumed at",
                 "icon": "",
                 "nullable": true,
                 "unsigned": true,
@@ -584,7 +581,7 @@
             {
                 "column": "fixed",
                 "label": "Fixed",
-                "icon": "fa-solid fa-wrench",
+                "icon": "fa-solid fa-wrench text-success",
                 "nullable": true,
                 "unsigned": true,
                 "type": "boolean"
@@ -787,6 +784,14 @@
                 "nullable": true,
                 "unsigned": true,
                 "type": "mediumText"
+            },
+            {
+                "column": "email",
+                "label": "Email",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "string"
             },
             {
                 "column": "phone",
@@ -1090,29 +1095,29 @@
             "type": "string"
         },
         {
-            "column": "sublocation_type",
-            "label": "Sublocation Type",
+            "column": "contact_type",
+            "label": "Contact Type",
             "icon": "",
             "nullable": false,
             "type": "string"
         },
         {
             "column": "created_by_id",
-            "label": "Created by id",
+            "label": "Created by ID",
             "icon": "",
             "nullable": false,
             "type": "uuid"
         },
         {
             "column": "modified_by_id",
-            "label": "Modified by id",
+            "label": "Modified by ID",
             "icon": "",
             "nullable": false,
             "type": "uuid"
         },
         {
             "column": "owned_by_id",
-            "label": "Owned by id",
+            "label": "Owned by ID",
             "icon": "",
             "nullable": false,
             "type": "uuid"
@@ -1120,20 +1125,6 @@
         {
             "column": "parent_id",
             "label": "Parent id",
-            "icon": "",
-            "nullable": false,
-            "type": "uuid"
-        },
-        {
-            "column": "sublocation_id",
-            "label": "Sublocation id",
-            "icon": "",
-            "nullable": false,
-            "type": "uuid"
-        },
-        {
-            "column": "location_id",
-            "label": "Location id",
             "icon": "",
             "nullable": false,
             "type": "uuid"
@@ -1230,15 +1221,15 @@
             "type": "string"
         },
         {
-            "column": "resumed_at",
-            "label": "Resumed at",
+            "column": "resolved_at",
+            "label": "Resolved at",
             "icon": "",
             "nullable": false,
             "type": "string"
         },
         {
-            "column": "resolved_at",
-            "label": "Resolved at",
+            "column": "resumed_at",
+            "label": "Resumed at",
             "icon": "",
             "nullable": false,
             "type": "string"
@@ -1470,7 +1461,7 @@
         {
             "column": "fixed",
             "label": "Fixed",
-            "icon": "fa-solid fa-wrench",
+            "icon": "fa-solid fa-wrench text-success",
             "nullable": false,
             "type": "boolean"
         },
@@ -1643,6 +1634,13 @@
             "type": "mediumText"
         },
         {
+            "column": "email",
+            "label": "Email",
+            "icon": "",
+            "nullable": false,
+            "type": "string"
+        },
+        {
             "column": "phone",
             "label": "Phone",
             "icon": "",
@@ -1728,7 +1726,7 @@
         }
     ],
     "create": {
-        "migration": "2024_07_31_000000_create_directory_sublocation_revisions_table",
+        "migration": "2024_07_31_000000_create_directory_contacts_table",
         "primary": "uuid",
         "timestamps": true,
         "softDeletes": true,
@@ -1738,9 +1736,9 @@
             "with": false
         },
         "ids": {
-            "sublocation_type": {
-                "column": "sublocation_type",
-                "label": "Sublocation Type",
+            "contact_type": {
+                "column": "contact_type",
+                "label": "Contact Type",
                 "description": "",
                 "foreign": null,
                 "icon": "",
@@ -1752,7 +1750,7 @@
             },
             "created_by_id": {
                 "column": "created_by_id",
-                "label": "Created by id",
+                "label": "Created by ID",
                 "description": "",
                 "foreign": {
                     "references": "id",
@@ -1767,7 +1765,7 @@
             },
             "modified_by_id": {
                 "column": "modified_by_id",
-                "label": "Modified by id",
+                "label": "Modified by ID",
                 "description": "",
                 "foreign": {
                     "references": "id",
@@ -1782,7 +1780,7 @@
             },
             "owned_by_id": {
                 "column": "owned_by_id",
-                "label": "Owned by id",
+                "label": "Owned by ID",
                 "description": "",
                 "foreign": {
                     "references": "id",
@@ -1800,36 +1798,6 @@
                 "label": "Parent id",
                 "description": "",
                 "foreign": null,
-                "icon": "",
-                "index": true,
-                "nullable": true,
-                "readOnly": false,
-                "unsigned": false,
-                "type": "uuid"
-            },
-            "sublocation_id": {
-                "column": "sublocation_id",
-                "label": "Sublocation id",
-                "description": "",
-                "foreign": {
-                    "references": "id",
-                    "on": "directory_sublocations"
-                },
-                "icon": "",
-                "index": true,
-                "nullable": true,
-                "readOnly": false,
-                "unsigned": false,
-                "type": "uuid"
-            },
-            "location_id": {
-                "column": "location_id",
-                "label": "Location id",
-                "description": "",
-                "foreign": {
-                    "references": "id",
-                    "on": "directory_locations"
-                },
                 "icon": "",
                 "index": true,
                 "nullable": true,
@@ -1956,7 +1924,7 @@
                 "description": "",
                 "icon": "",
                 "html": false,
-                "index": false,
+                "index": true,
                 "nullable": true,
                 "readOnly": false,
                 "type": "dateTime"
@@ -2088,7 +2056,7 @@
                 "column": "fixed",
                 "label": "Fixed",
                 "description": "",
-                "icon": "fa-solid fa-wrench",
+                "icon": "fa-solid fa-wrench text-success",
                 "default": false,
                 "index": false,
                 "nullable": false,
@@ -2377,6 +2345,17 @@
                 "readOnly": false,
                 "type": "mediumText"
             },
+            "email": {
+                "column": "email",
+                "label": "Email",
+                "description": "",
+                "icon": "",
+                "html": false,
+                "index": false,
+                "nullable": true,
+                "readOnly": false,
+                "type": "string"
+            },
             "phone": {
                 "column": "phone",
                 "label": "Phone",
@@ -2556,7 +2535,7 @@
                 "nullable": true,
                 "readOnly": false,
                 "type": "JSON_OBJECT",
-                "default": "{}"
+                "default": null
             },
             "x": {
                 "column": "x",
@@ -2746,7 +2725,7 @@
                 "nullable": true,
                 "readOnly": false,
                 "type": "JSON_OBJECT",
-                "default": "{}"
+                "default": null
             }
         },
         "json": {
@@ -2760,7 +2739,7 @@
                 "nullable": true,
                 "readOnly": false,
                 "type": "JSON_OBJECT",
-                "default": "{}"
+                "default": null
             },
             "assets": {
                 "column": "assets",
@@ -2772,7 +2751,7 @@
                 "nullable": true,
                 "readOnly": false,
                 "type": "JSON_OBJECT",
-                "default": "{}"
+                "default": null
             },
             "contact": {
                 "column": "contact",
@@ -2784,7 +2763,7 @@
                 "nullable": true,
                 "readOnly": false,
                 "type": "JSON_OBJECT",
-                "default": "{}"
+                "default": null
             },
             "meta": {
                 "column": "meta",
@@ -2796,7 +2775,7 @@
                 "nullable": true,
                 "readOnly": false,
                 "type": "JSON_OBJECT",
-                "default": "{}"
+                "default": null
             },
             "notes": {
                 "column": "notes",
@@ -2821,7 +2800,7 @@
                 "nullable": true,
                 "readOnly": false,
                 "type": "JSON_OBJECT",
-                "default": "{}"
+                "default": null
             },
             "sources": {
                 "column": "sources",
@@ -2833,14 +2812,14 @@
                 "nullable": true,
                 "readOnly": false,
                 "type": "JSON_OBJECT",
-                "default": "{}"
+                "default": null
             }
         }
     },
     "uses": [
-        "Database/Factories/Playground/Directory/Models/SublocationRevisionFactory",
+        "Database/Factories/Playground/Directory/Models/ContactFactory",
         "Illuminate/Database/Eloquent/Factories/HasFactory",
-        "Illuminate/Database/Eloquent/Relations/HasOne",
+        "Illuminate/Database/Eloquent/Relations/HasMany",
         "Illuminate/Support/Carbon",
         "Playground/Models/Model"
     ]

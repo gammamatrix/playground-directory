@@ -8,24 +8,23 @@ declare(strict_types=1);
 
 namespace Playground\Directory\Models;
 
-use Database\Factories\Playground\Directory\Models\SublocationFactory;
+use Database\Factories\Playground\Directory\Models\ContactRevisionFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Support\Carbon;
 use Playground\Models\Model;
 
 /**
- * \Playground\Directory\Models\Sublocation
+ * \Playground\Directory\Models\ContactRevision
  *
  * @property string $id
- * @property ?string $sublocation_type
+ * @property ?string $contact_type
  * @property ?scalar $created_by_id
  * @property ?scalar $modified_by_id
  * @property ?scalar $owned_by_id
  * @property ?string $parent_id
- * @property ?string $location_id
  * @property ?string $matrix_id
+ * @property ?string $contact_id
  * @property ?Carbon $created_at
  * @property ?Carbon $updated_at
  * @property ?Carbon $deleted_at
@@ -38,8 +37,8 @@ use Playground\Models\Model;
  * @property ?Carbon $postponed_at
  * @property ?Carbon $published_at
  * @property ?Carbon $released_at
- * @property ?Carbon $resumed_at
  * @property ?Carbon $resolved_at
+ * @property ?Carbon $resumed_at
  * @property ?Carbon $suspended_at
  * @property ?Carbon $timer_end_at
  * @property ?Carbon $timer_start_at
@@ -97,6 +96,7 @@ use Playground\Models\Model;
  * @property string $introduction
  * @property ?string $content
  * @property ?string $summary
+ * @property ?string $email
  * @property ?string $phone
  * @property string $icon
  * @property string $image
@@ -110,21 +110,21 @@ use Playground\Models\Model;
  * @property ?array<string, mixed> $options
  * @property ?array<string, mixed> $sources
  */
-class Sublocation extends Model
+class ContactRevision extends Model
 {
-    /** @use HasFactory<SublocationFactory> */
+    /** @use HasFactory<ContactRevisionFactory> */
     use HasFactory;
 
-    protected $table = 'directory_sublocations';
+    protected $table = 'directory_contact_revisions';
 
     protected $attributes = [
-        'sublocation_type' => null,
+        'contact_type' => null,
         'created_by_id' => null,
         'modified_by_id' => null,
         'owned_by_id' => null,
         'parent_id' => null,
-        'location_id' => null,
         'matrix_id' => null,
+        'contact_id' => null,
         'created_at' => null,
         'updated_at' => null,
         'deleted_at' => null,
@@ -137,8 +137,8 @@ class Sublocation extends Model
         'postponed_at' => null,
         'published_at' => null,
         'released_at' => null,
-        'resumed_at' => null,
         'resolved_at' => null,
+        'resumed_at' => null,
         'suspended_at' => null,
         'timer_end_at' => null,
         'timer_start_at' => null,
@@ -154,7 +154,7 @@ class Sublocation extends Model
         'rank' => 0,
         'size' => 0,
         'revision' => false,
-        'matrix' => '{}',
+        'matrix' => null,
         'x' => null,
         'y' => null,
         'z' => null,
@@ -196,26 +196,27 @@ class Sublocation extends Model
         'introduction' => '',
         'content' => null,
         'summary' => null,
+        'email' => null,
         'phone' => null,
         'icon' => '',
         'image' => '',
         'avatar' => '',
-        'ui' => '{}',
-        'address' => '{}',
-        'assets' => '{}',
-        'contact' => '{}',
-        'meta' => '{}',
+        'ui' => null,
+        'address' => null,
+        'assets' => null,
+        'contact' => null,
+        'meta' => null,
         'notes' => '[]',
-        'options' => '{}',
-        'sources' => '{}',
+        'options' => null,
+        'sources' => null,
     ];
 
     protected $fillable = [
-        'sublocation_type',
+        'contact_type',
         'owned_by_id',
         'parent_id',
-        'location_id',
         'matrix_id',
+        'contact_id',
         'canceled_at',
         'closed_at',
         'embargo_at',
@@ -225,8 +226,8 @@ class Sublocation extends Model
         'postponed_at',
         'published_at',
         'released_at',
-        'resumed_at',
         'resolved_at',
+        'resumed_at',
         'suspended_at',
         'timer_end_at',
         'timer_start_at',
@@ -283,6 +284,7 @@ class Sublocation extends Model
         'introduction',
         'content',
         'summary',
+        'email',
         'phone',
         'icon',
         'image',
@@ -299,7 +301,7 @@ class Sublocation extends Model
     protected function casts(): array
     {
         return [
-            'sublocation_type' => 'string',
+            'contact_type' => 'string',
             'created_at' => 'datetime',
             'updated_at' => 'datetime',
             'deleted_at' => 'datetime',
@@ -312,8 +314,8 @@ class Sublocation extends Model
             'postponed_at' => 'datetime',
             'published_at' => 'datetime',
             'released_at' => 'datetime',
-            'resumed_at' => 'datetime',
             'resolved_at' => 'datetime',
+            'resumed_at' => 'datetime',
             'suspended_at' => 'datetime',
             'timer_end_at' => 'datetime',
             'timer_start_at' => 'datetime',
@@ -371,6 +373,7 @@ class Sublocation extends Model
             'introduction' => 'string',
             'content' => 'string',
             'summary' => 'string',
+            'email' => 'string',
             'phone' => 'string',
             'icon' => 'string',
             'image' => 'string',
@@ -387,30 +390,16 @@ class Sublocation extends Model
     }
 
     /**
-     * The location of the sublocation
+     * The contact of the revision.
      *
-     * @return HasOne<Location, $this>
+     * @return HasOne<Contact, $this>
      */
-    public function location(): HasOne
+    public function contact(): HasOne
     {
         return $this->hasOne(
-            Location::class,
+            Contact::class,
             'id',
-            'location_id'
-        );
-    }
-
-    /**
-     * The revisions of the sublocation.
-     *
-     * @return HasMany<SublocationRevision, $this>
-     */
-    public function revisions(): HasMany
-    {
-        return $this->hasMany(
-            SublocationRevision::class,
-            'sublocation_id',
-            'id'
+            'contact_id'
         );
     }
 }

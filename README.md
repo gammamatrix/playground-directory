@@ -6,7 +6,7 @@
 
 The Playground Directory is a package for [Laravel](https://laravel.com/docs/12.x) applications.
 
-Playground: Provide the Directory models for the Playground Directory System.
+Playground: Provides the Directory models for the Playground Directory System.
 
 Read more on using [Playground: Directory at Read the Docs](https://gammamatrix-playground.readthedocs.io/en/develop/built-components/directory.html)
 
@@ -18,7 +18,7 @@ Read more on using [Playground: Directory at Read the Docs](https://gammamatrix-
 
 Install this package, with composer, to get access to the Directory Models:
 
-```bash
+```shell
 composer require gammamatrix/playground-directory
 ```
 
@@ -26,7 +26,7 @@ composer require gammamatrix/playground-directory
 
 Playground Directory provides information in the `artisan about` command.
 
-[//]: # (<img src="resources/docs/artisan-about-playground-directory.png" alt="screenshot of artisan about command with Playground: Directory.">)
+<img src="resources/docs/artisan-about-playground-directory.png" alt="screenshot of artisan about command with Playground: Directory.">
 
 ## Configuration
 
@@ -35,7 +35,7 @@ Migrations are disabled by default. This package may sometimes be installed wher
 See the contents of the published config file: [config/playground-directory.php](config/playground-directory.php)
 
 You can publish the config file with:
-```bash
+```shell
 php artisan vendor:publish --provider="Playground\Directory\ServiceProvider" --tag="playground-config"
 ```
 
@@ -50,10 +50,10 @@ php artisan vendor:publish --provider="Playground\Directory\ServiceProvider" --t
 ## Models
 
 This package includes [factories](database/factories), models and [migrations](database/migrations) for:
+- [Contact](src/Models/Contact.php)
+- [ContactRevision](src/Models/ContactRevision.php)
 - [Location](src/Models/Location.php)
 - [LocationRevision](src/Models/LocationRevision.php)
-- [Sublocation](src/Models/Sublocation.php)
-- [SublocationRevision](src/Models/SublocationRevision.php)
 
 ## Migrations
 
@@ -63,34 +63,28 @@ See the contents of the published config file: [database/migrations](database/mi
 - NOTE: There are 4 tables that will be created, they do have indexes and unique constraints defined; however, this release does not have the foreign key constraint migrations included at this time.
 
 You can publish the migrations file with:
-```bash
+```shell
 php artisan vendor:publish --provider="Playground\Directory\ServiceProvider" --tag="playground-migrations"
 ```
 
 ## Cloc
 
-```sh
+```shell
 composer cloc
 ```
 
-```
-➜  playground-directory git:(develop) ✗ composer cloc
-      79 text files.
-      74 unique files.
-      11 files ignored.
-
-github.com/AlDanial/cloc v 2.08  T=0.04 s (1939.6 files/s, 429219.9 lines/s)
+```terminaloutput
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-JSON                            29              0              0          11871
-PHP                             28            321            742           2152
-XML                             12              0              7            822
-YAML                             1              5              0            275
-Markdown                         3             46              0            120
+JSON                            29              0              0          12293
+PHP                             29            323            735           2122
+XML                              3              0              7            215
+YAML                             1              4              0            188
+Markdown                         3             45              0            103
 INI                              1              3              0             12
 -------------------------------------------------------------------------------
-SUM:                            74            375            749          15252
+SUM:                            66            375            742          14933
 -------------------------------------------------------------------------------
 ```
 
@@ -103,30 +97,30 @@ Tests at level 10 on:
 - `tests/Feature/`
 - `tests/Unit/`
 
-```sh
+```shell
 composer analyse
 ```
 
 ## Coding Standards
 
-```sh
+```shell
 composer format
 ```
 
 ## Testing
 
 Unit tests
-```sh
+```shell
 composer test
 ```
 
 Unit and feature tests
-```sh
+```shell
 composer test-dev
 ```
 
 Run unit and feature tests in parallel:
-```sh
+```shell
 composer test-parallel
 ```
 

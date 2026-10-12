@@ -10,7 +10,6 @@ namespace Tests\Feature\Playground\Directory\Models\Location;
 
 use Playground\Directory\Models\Location;
 use Playground\Directory\Models\LocationRevision;
-use Playground\Directory\Models\Sublocation;
 use Playground\Models\User;
 use Tests\Feature\Playground\Directory\Models\ModelCase;
 
@@ -27,10 +26,6 @@ class ModelTest extends ModelCase
         'revisions' => [
             'key' => 'location_id',
             'modelClass' => LocationRevision::class,
-        ],
-        'sublocations' => [
-            'key' => 'location_id',
-            'modelClass' => Sublocation::class,
         ],
     ];
 

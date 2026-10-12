@@ -23,8 +23,8 @@ use Playground\Models\Model;
  * @property ?scalar $modified_by_id
  * @property ?scalar $owned_by_id
  * @property ?string $parent_id
- * @property ?string $location_id
  * @property ?string $matrix_id
+ * @property ?string $location_id
  * @property ?Carbon $created_at
  * @property ?Carbon $updated_at
  * @property ?Carbon $deleted_at
@@ -37,8 +37,8 @@ use Playground\Models\Model;
  * @property ?Carbon $postponed_at
  * @property ?Carbon $published_at
  * @property ?Carbon $released_at
- * @property ?Carbon $resumed_at
  * @property ?Carbon $resolved_at
+ * @property ?Carbon $resumed_at
  * @property ?Carbon $suspended_at
  * @property ?Carbon $timer_end_at
  * @property ?Carbon $timer_start_at
@@ -96,6 +96,7 @@ use Playground\Models\Model;
  * @property string $introduction
  * @property ?string $content
  * @property ?string $summary
+ * @property ?string $email
  * @property ?string $phone
  * @property string $icon
  * @property string $image
@@ -122,8 +123,8 @@ class LocationRevision extends Model
         'modified_by_id' => null,
         'owned_by_id' => null,
         'parent_id' => null,
-        'location_id' => null,
         'matrix_id' => null,
+        'location_id' => null,
         'created_at' => null,
         'updated_at' => null,
         'deleted_at' => null,
@@ -136,8 +137,8 @@ class LocationRevision extends Model
         'postponed_at' => null,
         'published_at' => null,
         'released_at' => null,
-        'resumed_at' => null,
         'resolved_at' => null,
+        'resumed_at' => null,
         'suspended_at' => null,
         'timer_end_at' => null,
         'timer_start_at' => null,
@@ -153,7 +154,7 @@ class LocationRevision extends Model
         'rank' => 0,
         'size' => 0,
         'revision' => false,
-        'matrix' => '{}',
+        'matrix' => null,
         'x' => null,
         'y' => null,
         'z' => null,
@@ -195,26 +196,27 @@ class LocationRevision extends Model
         'introduction' => '',
         'content' => null,
         'summary' => null,
+        'email' => null,
         'phone' => null,
         'icon' => '',
         'image' => '',
         'avatar' => '',
-        'ui' => '{}',
-        'address' => '{}',
-        'assets' => '{}',
-        'contact' => '{}',
-        'meta' => '{}',
+        'ui' => null,
+        'address' => null,
+        'assets' => null,
+        'contact' => null,
+        'meta' => null,
         'notes' => '[]',
-        'options' => '{}',
-        'sources' => '{}',
+        'options' => null,
+        'sources' => null,
     ];
 
     protected $fillable = [
         'location_type',
         'owned_by_id',
         'parent_id',
-        'location_id',
         'matrix_id',
+        'location_id',
         'canceled_at',
         'closed_at',
         'embargo_at',
@@ -224,8 +226,8 @@ class LocationRevision extends Model
         'postponed_at',
         'published_at',
         'released_at',
-        'resumed_at',
         'resolved_at',
+        'resumed_at',
         'suspended_at',
         'timer_end_at',
         'timer_start_at',
@@ -282,6 +284,7 @@ class LocationRevision extends Model
         'introduction',
         'content',
         'summary',
+        'email',
         'phone',
         'icon',
         'image',
@@ -311,8 +314,8 @@ class LocationRevision extends Model
             'postponed_at' => 'datetime',
             'published_at' => 'datetime',
             'released_at' => 'datetime',
-            'resumed_at' => 'datetime',
             'resolved_at' => 'datetime',
+            'resumed_at' => 'datetime',
             'suspended_at' => 'datetime',
             'timer_end_at' => 'datetime',
             'timer_start_at' => 'datetime',
@@ -370,6 +373,7 @@ class LocationRevision extends Model
             'introduction' => 'string',
             'content' => 'string',
             'summary' => 'string',
+            'email' => 'string',
             'phone' => 'string',
             'icon' => 'string',
             'image' => 'string',

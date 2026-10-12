@@ -6,17 +6,17 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit\Playground\Directory\Models\SublocationRevision;
+namespace Tests\Unit\Playground\Directory\Models\ContactRevision;
 
-use Playground\Directory\Models\SublocationRevision;
+use Playground\Directory\Models\ContactRevision;
 use Tests\Unit\Playground\Directory\Models\ModelCase;
 
 /**
- * \Tests\Unit\Playground\Directory\Models\SublocationRevision\ModelTest
+ * \Tests\Unit\Playground\Directory\Models\ContactRevision\ModelTest
  */
 class ModelTest extends ModelCase
 {
-    protected string $modelClass = SublocationRevision::class;
+    protected string $modelClass = ContactRevision::class;
 
     protected bool $hasRelationships = true;
 
@@ -25,7 +25,6 @@ class ModelTest extends ModelCase
         'modifier',
         'owner',
         'parent',
-        'sublocation',
-        'location',
+        'contact',
     ];
 }

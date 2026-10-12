@@ -76,10 +76,10 @@ class ServiceProvider extends AuthServiceProvider
         $migrations = [];
 
         foreach ([
+            '2024_07_31_000000_create_directory_contacts_table.php',
+            '2024_07_31_000000_create_directory_contact_revisions_table.php',
             '2024_07_31_000000_create_directory_locations_table.php',
             '2024_07_31_000000_create_directory_location_revisions_table.php',
-            '2024_07_31_000000_create_directory_sublocations_table.php',
-            '2024_07_31_000000_create_directory_sublocation_revisions_table.php',
         ] as $file) {
             $migrations[dirname(__DIR__).'/database/migrations/'.$file] = database_path('migrations/'.$file);
         }

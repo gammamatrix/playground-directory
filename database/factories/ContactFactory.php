@@ -10,21 +10,21 @@ namespace Database\Factories\Playground\Directory\Models;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
-use Playground\Directory\Models\SublocationRevision;
+use Playground\Directory\Models\Contact;
 
 /**
- * \Database\Factories\Playground\Directory\Models\SublocationRevisionFactory
+ * \Database\Factories\Playground\Directory\Models\ContactFactory
  *
- * @extends Factory<SublocationRevision>
+ * @extends Factory<Contact>
  */
-class SublocationRevisionFactory extends Factory
+class ContactFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
-     * @var class-string<SublocationRevision>
+     * @var class-string<Contact>
      */
-    protected $model = SublocationRevision::class;
+    protected $model = Contact::class;
 
     /**
      * Define the model's default state.
@@ -48,14 +48,14 @@ class SublocationRevisionFactory extends Factory
 
     // States: flags
 
-    public function locked(): SublocationRevisionFactory
+    public function locked(): ContactFactory
     {
         return $this->state(fn (array $attributes) => [
             'locked' => true,
         ]);
     }
 
-    public function published(): SublocationRevisionFactory
+    public function published(): ContactFactory
     {
         return $this->state(fn (array $attributes) => [
             'published' => true,

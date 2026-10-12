@@ -50,9 +50,9 @@ return new class extends Migration
             $table->dateTime('planned_start_at')->nullable();
             $table->dateTime('postponed_at')->nullable();
             $table->dateTime('published_at')->nullable();
-            $table->dateTime('released_at')->nullable();
-            $table->dateTime('resumed_at')->nullable();
+            $table->dateTime('released_at')->nullable()->index();
             $table->dateTime('resolved_at')->nullable()->index();
+            $table->dateTime('resumed_at')->nullable();
             $table->dateTime('suspended_at')->nullable();
             $table->dateTime('timer_end_at')->nullable()->index();
             $table->dateTime('timer_start_at')->nullable()->index();
@@ -125,6 +125,7 @@ return new class extends Migration
             $table->string('introduction', 512)->default('');
             $table->mediumText('content')->nullable();
             $table->mediumText('summary')->nullable();
+            $table->string('email')->nullable();
             $table->string('phone')->nullable();
 
             // Ui

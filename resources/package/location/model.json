@@ -3,18 +3,38 @@
     "config": "playground-directory",
     "fqdn": "Playground/Directory/Models/Location",
     "module": "Directory",
+    "module_label": "Directory",
+    "module_labels": "Directories",
     "module_slug": "directory",
+    "module_slugs": "directories",
     "name": "Location",
+    "names": "Locations",
     "namespace": "Playground/Directory",
     "organization": "Playground",
     "package": "playground-directory",
     "model": "Location",
     "model_attribute": "title",
     "model_attribute_required": true,
-    "model_plural": "Locations",
-    "model_singular": "Location",
+    "model_camel": "location",
+    "model_camels": "locations",
+    "model_label": "Location",
+    "model_labels": "Locations",
+    "model_lower": "location",
+    "model_lowers": "locations",
+    "model_kebab": "location",
+    "model_kebabs": "locations",
+    "model_plural": "",
+    "model_route_param": "location",
+    "model_singular": "",
     "model_slug": "location",
-    "model_slug_plural": "locations",
+    "model_slugs": "locations",
+    "model_slug_plural": "",
+    "model_snake": "location",
+    "model_snakes": "locations",
+    "model_studly": "Location",
+    "model_studlies": "Locations",
+    "model_variable": "location",
+    "model_variables": "locations",
     "recipe": "directory",
     "type": "playground-model",
     "table": "directory_locations",
@@ -38,15 +58,9 @@
             "related": "LocationRevision",
             "foreignKey": "location_id",
             "localKey": "id"
-        },
-        "sublocations": {
-            "comment": "The sublocations of the location.",
-            "accessor": "sublocations",
-            "related": "Sublocation",
-            "foreignKey": "location_id",
-            "localKey": "id"
         }
     },
+    "HasManyThrough": [],
     "scopes": {
         "sort": {
             "include": "minus",
@@ -72,8 +86,8 @@
         "postponed_at": null,
         "published_at": null,
         "released_at": null,
-        "resumed_at": null,
         "resolved_at": null,
+        "resumed_at": null,
         "suspended_at": null,
         "timer_end_at": null,
         "timer_start_at": null,
@@ -89,7 +103,7 @@
         "rank": 0,
         "size": 0,
         "revision": false,
-        "matrix": "{}",
+        "matrix": null,
         "x": null,
         "y": null,
         "z": null,
@@ -131,18 +145,19 @@
         "introduction": "",
         "content": null,
         "summary": null,
+        "email": null,
         "phone": null,
         "icon": "",
         "image": "",
         "avatar": "",
-        "ui": "{}",
-        "address": "{}",
-        "assets": "{}",
-        "contact": "{}",
-        "meta": "{}",
+        "ui": null,
+        "address": null,
+        "assets": null,
+        "contact": null,
+        "meta": null,
         "notes": "[]",
-        "options": "{}",
-        "sources": "{}"
+        "options": null,
+        "sources": null
     },
     "casts": {
         "location_type": "string",
@@ -158,8 +173,8 @@
         "postponed_at": "datetime",
         "published_at": "datetime",
         "released_at": "datetime",
-        "resumed_at": "datetime",
         "resolved_at": "datetime",
+        "resumed_at": "datetime",
         "suspended_at": "datetime",
         "timer_end_at": "datetime",
         "timer_start_at": "datetime",
@@ -217,6 +232,7 @@
         "introduction": "string",
         "content": "string",
         "summary": "string",
+        "email": "string",
         "phone": "string",
         "icon": "string",
         "image": "string",
@@ -244,8 +260,8 @@
         "postponed_at",
         "published_at",
         "released_at",
-        "resumed_at",
         "resolved_at",
+        "resumed_at",
         "suspended_at",
         "timer_end_at",
         "timer_start_at",
@@ -302,6 +318,7 @@
         "introduction",
         "content",
         "summary",
+        "email",
         "phone",
         "icon",
         "image",
@@ -335,7 +352,7 @@
             },
             {
                 "column": "created_by_id",
-                "label": "Created by id",
+                "label": "Created by ID",
                 "icon": "",
                 "nullable": true,
                 "unsigned": true,
@@ -343,7 +360,7 @@
             },
             {
                 "column": "modified_by_id",
-                "label": "Modified by id",
+                "label": "Modified by ID",
                 "icon": "",
                 "nullable": true,
                 "unsigned": true,
@@ -351,7 +368,7 @@
             },
             {
                 "column": "owned_by_id",
-                "label": "Owned by id",
+                "label": "Owned by ID",
                 "icon": "",
                 "nullable": true,
                 "unsigned": true,
@@ -472,16 +489,16 @@
                 "type": "datetime"
             },
             {
-                "column": "resumed_at",
-                "label": "Resumed at",
+                "column": "resolved_at",
+                "label": "Resolved at",
                 "icon": "",
                 "nullable": true,
                 "unsigned": true,
                 "type": "datetime"
             },
             {
-                "column": "resolved_at",
-                "label": "Resolved at",
+                "column": "resumed_at",
+                "label": "Resumed at",
                 "icon": "",
                 "nullable": true,
                 "unsigned": true,
@@ -564,7 +581,7 @@
             {
                 "column": "fixed",
                 "label": "Fixed",
-                "icon": "fa-solid fa-wrench",
+                "icon": "fa-solid fa-wrench text-success",
                 "nullable": true,
                 "unsigned": true,
                 "type": "boolean"
@@ -767,6 +784,14 @@
                 "nullable": true,
                 "unsigned": true,
                 "type": "mediumText"
+            },
+            {
+                "column": "email",
+                "label": "Email",
+                "icon": "",
+                "nullable": true,
+                "unsigned": true,
+                "type": "string"
             },
             {
                 "column": "phone",
@@ -1078,21 +1103,21 @@
         },
         {
             "column": "created_by_id",
-            "label": "Created by id",
+            "label": "Created by ID",
             "icon": "",
             "nullable": false,
             "type": "uuid"
         },
         {
             "column": "modified_by_id",
-            "label": "Modified by id",
+            "label": "Modified by ID",
             "icon": "",
             "nullable": false,
             "type": "uuid"
         },
         {
             "column": "owned_by_id",
-            "label": "Owned by id",
+            "label": "Owned by ID",
             "icon": "",
             "nullable": false,
             "type": "uuid"
@@ -1196,15 +1221,15 @@
             "type": "string"
         },
         {
-            "column": "resumed_at",
-            "label": "Resumed at",
+            "column": "resolved_at",
+            "label": "Resolved at",
             "icon": "",
             "nullable": false,
             "type": "string"
         },
         {
-            "column": "resolved_at",
-            "label": "Resolved at",
+            "column": "resumed_at",
+            "label": "Resumed at",
             "icon": "",
             "nullable": false,
             "type": "string"
@@ -1436,7 +1461,7 @@
         {
             "column": "fixed",
             "label": "Fixed",
-            "icon": "fa-solid fa-wrench",
+            "icon": "fa-solid fa-wrench text-success",
             "nullable": false,
             "type": "boolean"
         },
@@ -1609,6 +1634,13 @@
             "type": "mediumText"
         },
         {
+            "column": "email",
+            "label": "Email",
+            "icon": "",
+            "nullable": false,
+            "type": "string"
+        },
+        {
             "column": "phone",
             "label": "Phone",
             "icon": "",
@@ -1718,7 +1750,7 @@
             },
             "created_by_id": {
                 "column": "created_by_id",
-                "label": "Created by id",
+                "label": "Created by ID",
                 "description": "",
                 "foreign": {
                     "references": "id",
@@ -1733,7 +1765,7 @@
             },
             "modified_by_id": {
                 "column": "modified_by_id",
-                "label": "Modified by id",
+                "label": "Modified by ID",
                 "description": "",
                 "foreign": {
                     "references": "id",
@@ -1748,7 +1780,7 @@
             },
             "owned_by_id": {
                 "column": "owned_by_id",
-                "label": "Owned by id",
+                "label": "Owned by ID",
                 "description": "",
                 "foreign": {
                     "references": "id",
@@ -1892,7 +1924,7 @@
                 "description": "",
                 "icon": "",
                 "html": false,
-                "index": false,
+                "index": true,
                 "nullable": true,
                 "readOnly": false,
                 "type": "dateTime"
@@ -2024,7 +2056,7 @@
                 "column": "fixed",
                 "label": "Fixed",
                 "description": "",
-                "icon": "fa-solid fa-wrench",
+                "icon": "fa-solid fa-wrench text-success",
                 "default": false,
                 "index": false,
                 "nullable": false,
@@ -2313,6 +2345,17 @@
                 "readOnly": false,
                 "type": "mediumText"
             },
+            "email": {
+                "column": "email",
+                "label": "Email",
+                "description": "",
+                "icon": "",
+                "html": false,
+                "index": false,
+                "nullable": true,
+                "readOnly": false,
+                "type": "string"
+            },
             "phone": {
                 "column": "phone",
                 "label": "Phone",
@@ -2492,7 +2535,7 @@
                 "nullable": true,
                 "readOnly": false,
                 "type": "JSON_OBJECT",
-                "default": "{}"
+                "default": null
             },
             "x": {
                 "column": "x",
@@ -2682,7 +2725,7 @@
                 "nullable": true,
                 "readOnly": false,
                 "type": "JSON_OBJECT",
-                "default": "{}"
+                "default": null
             }
         },
         "json": {
@@ -2696,7 +2739,7 @@
                 "nullable": true,
                 "readOnly": false,
                 "type": "JSON_OBJECT",
-                "default": "{}"
+                "default": null
             },
             "assets": {
                 "column": "assets",
@@ -2708,7 +2751,7 @@
                 "nullable": true,
                 "readOnly": false,
                 "type": "JSON_OBJECT",
-                "default": "{}"
+                "default": null
             },
             "contact": {
                 "column": "contact",
@@ -2720,7 +2763,7 @@
                 "nullable": true,
                 "readOnly": false,
                 "type": "JSON_OBJECT",
-                "default": "{}"
+                "default": null
             },
             "meta": {
                 "column": "meta",
@@ -2732,7 +2775,7 @@
                 "nullable": true,
                 "readOnly": false,
                 "type": "JSON_OBJECT",
-                "default": "{}"
+                "default": null
             },
             "notes": {
                 "column": "notes",
@@ -2757,7 +2800,7 @@
                 "nullable": true,
                 "readOnly": false,
                 "type": "JSON_OBJECT",
-                "default": "{}"
+                "default": null
             },
             "sources": {
                 "column": "sources",
@@ -2769,7 +2812,7 @@
                 "nullable": true,
                 "readOnly": false,
                 "type": "JSON_OBJECT",
-                "default": "{}"
+                "default": null
             }
         }
     },

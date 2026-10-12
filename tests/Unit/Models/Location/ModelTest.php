@@ -22,7 +22,6 @@ class ModelTest extends ModelCase
 
     protected array $hasMany = [
         'revisions',
-        'sublocations',
     ];
 
     protected array $hasOne = [

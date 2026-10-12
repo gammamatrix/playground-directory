@@ -1,8 +1,7 @@
 {
     "name": "gammamatrix/playground-directory",
-    "description": "Playground: Provide the Directory models for the Playground Directory System.",
+    "description": "Playground: Provides the Directory models for the Playground Directory System.",
     "keywords": [
-        "cms",
         "directory",
         "gammamatrix",
         "laravel",
@@ -61,7 +60,7 @@
     "prefer-stable": true,
     "scripts": {
         "analyse": "vendor/bin/phpstan analyse --verbose --debug --level max",
-        "cloc": "cloc --exclude-dir=node_modules,output,vendor .",
+        "cloc": "cloc --exclude-ext=lock --exclude-dir=.git,.idea,.phpunit.cache,node_modules,output,vendor .",
         "format": "vendor/bin/pint",
         "test": "vendor/bin/testbench package:test",
         "test-dev": [
