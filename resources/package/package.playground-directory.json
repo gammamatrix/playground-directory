@@ -76,10 +76,10 @@
     },
     "controllers": [],
     "models": {
-        "Contact": "resources/package/playground-directory/model.contact.json",
-        "ContactRevision": "resources/package/playground-directory/model.contact-revision.json",
-        "Location": "resources/package/playground-directory/model.location.json",
-        "LocationRevision": "resources/package/playground-directory/model.location-revision.json"
+        "Contact": "resources/configurations/playground-directory/contact/model.json",
+        "ContactRevision": "resources/configurations/playground-directory/contact-revision/model.json",
+        "Location": "resources/configurations/playground-directory/location/model.json",
+        "LocationRevision": "resources/configurations/playground-directory/location-revision/model.json"
     },
     "policies": [],
     "requests": [],
