@@ -1,6 +1,16 @@
 Command (Tests\Feature\Playground\Directory\Console\Commands\About\Command)
  [x] Command about displays package information and succeed
 
+Model (Tests\Feature\Playground\Directory\Models\ContactRevision\Model)
+ [x] Model instance
+ [x] Verify model relationships
+ [x] Factory create
+
+Model (Tests\Feature\Playground\Directory\Models\Contact\Model)
+ [x] Model instance
+ [x] Verify model relationships
+ [x] Factory create
+
 Model (Tests\Feature\Playground\Directory\Models\LocationRevision\Model)
  [x] Model instance
  [x] Verify model relationships
@@ -11,15 +21,15 @@ Model (Tests\Feature\Playground\Directory\Models\Location\Model)
  [x] Verify model relationships
  [x] Factory create
 
-Model (Tests\Feature\Playground\Directory\Models\SublocationRevision\Model)
+Model (Tests\Unit\Playground\Directory\Models\ContactRevision\Model)
  [x] Model instance
  [x] Verify model relationships
- [x] Factory create
+ [x] Model factory make
 
-Model (Tests\Feature\Playground\Directory\Models\Sublocation\Model)
+Model (Tests\Unit\Playground\Directory\Models\Contact\Model)
  [x] Model instance
  [x] Verify model relationships
- [x] Factory create
+ [x] Model factory make
 
 Model (Tests\Unit\Playground\Directory\Models\LocationRevision\Model)
  [x] Model instance
@@ -27,16 +37,6 @@ Model (Tests\Unit\Playground\Directory\Models\LocationRevision\Model)
  [x] Model factory make
 
 Model (Tests\Unit\Playground\Directory\Models\Location\Model)
- [x] Model instance
- [x] Verify model relationships
- [x] Model factory make
-
-Model (Tests\Unit\Playground\Directory\Models\SublocationRevision\Model)
- [x] Model instance
- [x] Verify model relationships
- [x] Model factory make
-
-Model (Tests\Unit\Playground\Directory\Models\Sublocation\Model)
  [x] Model instance
  [x] Verify model relationships
  [x] Model factory make

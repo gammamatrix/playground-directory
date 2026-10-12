@@ -1,18 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2026-09-13 17:23:43</timestamp>
+  <timestamp>2026-10-12 17:11:35</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>15</methodCount>
+    <methodCount>12</methodCount>
     <crapMethodCount>0</crapMethodCount>
     <crapLoad>0</crapLoad>
-    <totalCrap>25</totalCrap>
+    <totalCrap>22</totalCrap>
     <crapMethodPercent>0</crapMethodPercent>
   </stats>
   <methods>
     <method>
       <package>Playground\Directory\Models</package>
+      <className>Playground\Directory\Models\Contact</className>
+      <methodName>casts</methodName>
+      <methodSignature>casts(): array</methodSignature>
+      <fullMethod>casts(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Directory\Models</package>
+      <className>Playground\Directory\Models\Contact</className>
+      <methodName>revisions</methodName>
+      <methodSignature>revisions(): HasMany</methodSignature>
+      <fullMethod>revisions(): HasMany</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Directory\Models</package>
+      <className>Playground\Directory\Models\ContactRevision</className>
+      <methodName>casts</methodName>
+      <methodSignature>casts(): array</methodSignature>
+      <fullMethod>casts(): array</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Directory\Models</package>
+      <className>Playground\Directory\Models\ContactRevision</className>
+      <methodName>contact</methodName>
+      <methodSignature>contact(): HasOne</methodSignature>
+      <fullMethod>contact(): HasOne</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Directory\Models</package>
       <className>Playground\Directory\Models\Location</className>
       <methodName>casts</methodName>
       <methodSignature>casts(): array</methodSignature>
@@ -35,17 +79,6 @@
     </method>
     <method>
       <package>Playground\Directory\Models</package>
-      <className>Playground\Directory\Models\Location</className>
-      <methodName>sublocations</methodName>
-      <methodSignature>sublocations(): HasMany</methodSignature>
-      <fullMethod>sublocations(): HasMany</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Playground\Directory\Models</package>
       <className>Playground\Directory\Models\LocationRevision</className>
       <methodName>casts</methodName>
       <methodSignature>casts(): array</methodSignature>
@@ -58,72 +91,6 @@
     <method>
       <package>Playground\Directory\Models</package>
       <className>Playground\Directory\Models\LocationRevision</className>
-      <methodName>location</methodName>
-      <methodSignature>location(): HasOne</methodSignature>
-      <fullMethod>location(): HasOne</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Playground\Directory\Models</package>
-      <className>Playground\Directory\Models\Sublocation</className>
-      <methodName>casts</methodName>
-      <methodSignature>casts(): array</methodSignature>
-      <fullMethod>casts(): array</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Playground\Directory\Models</package>
-      <className>Playground\Directory\Models\Sublocation</className>
-      <methodName>location</methodName>
-      <methodSignature>location(): HasOne</methodSignature>
-      <fullMethod>location(): HasOne</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Playground\Directory\Models</package>
-      <className>Playground\Directory\Models\Sublocation</className>
-      <methodName>revisions</methodName>
-      <methodSignature>revisions(): HasMany</methodSignature>
-      <fullMethod>revisions(): HasMany</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Playground\Directory\Models</package>
-      <className>Playground\Directory\Models\SublocationRevision</className>
-      <methodName>casts</methodName>
-      <methodSignature>casts(): array</methodSignature>
-      <fullMethod>casts(): array</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Playground\Directory\Models</package>
-      <className>Playground\Directory\Models\SublocationRevision</className>
-      <methodName>sublocation</methodName>
-      <methodSignature>sublocation(): HasOne</methodSignature>
-      <fullMethod>sublocation(): HasOne</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Playground\Directory\Models</package>
-      <className>Playground\Directory\Models\SublocationRevision</className>
       <methodName>location</methodName>
       <methodSignature>location(): HasOne</methodSignature>
       <fullMethod>location(): HasOne</fullMethod>
