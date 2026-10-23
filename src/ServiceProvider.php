@@ -80,6 +80,8 @@ class ServiceProvider extends AuthServiceProvider
             '2024_07_31_000000_create_directory_contact_revisions_table.php',
             '2024_07_31_000000_create_directory_locations_table.php',
             '2024_07_31_000000_create_directory_location_revisions_table.php',
+            '2024_07_31_000000_create_directory_tags_table.php',
+            '2024_07_31_000000_create_directory_tagged_table.php',
         ] as $file) {
             $migrations[dirname(__DIR__).'/database/migrations/'.$file] = database_path('migrations/'.$file);
         }

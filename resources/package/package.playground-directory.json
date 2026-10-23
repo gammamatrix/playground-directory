@@ -79,7 +79,9 @@
         "Contact": "resources/configurations/playground-directory/contact/model.json",
         "ContactRevision": "resources/configurations/playground-directory/contact-revision/model.json",
         "Location": "resources/configurations/playground-directory/location/model.json",
-        "LocationRevision": "resources/configurations/playground-directory/location-revision/model.json"
+        "LocationRevision": "resources/configurations/playground-directory/location-revision/model.json",
+        "Tag": "resources/configurations/playground-directory/tag/model.json",
+        "Tagged": "resources/configurations/playground-directory/tagged/model.json"
     },
     "policies": [],
     "requests": [],

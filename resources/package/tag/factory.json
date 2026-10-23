@@ -1,0 +1,16 @@
+{
+    "class": "TagFactory",
+    "config": "playground-directory",
+    "fqdn": "Database/Factories/Database/Factories/Playground/Directory/Models/TagFactory",
+    "module": "Directory",
+    "module_slug": "directory",
+    "name": "TagFactory",
+    "namespace": "Database/Factories/Playground/Directory/Models",
+    "organization": "Playground",
+    "package": "playground-directory",
+    "model": "Tag",
+    "model_fqdn": "Playground/Directory/Models/Tag",
+    "recipe": "directory",
+    "type": "playground-model",
+    "models": []
+}

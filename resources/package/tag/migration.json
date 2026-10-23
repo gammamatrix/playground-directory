@@ -1,0 +1,17 @@
+{
+    "class": "2024_07_31_000000_create_directory_tags_table",
+    "config": "playground-directory",
+    "model": "Tag",
+    "model_fqdn": "Playground/Directory/Models/Tag",
+    "module": "Directory",
+    "module_slug": "directory",
+    "name": "Tag",
+    "namespace": "Playground/Directory",
+    "organization": "Playground",
+    "package": "playground-directory",
+    "table": "directory_tags",
+    "type": "playground-model",
+    "models": [],
+    "create": true,
+    "update": false
+}

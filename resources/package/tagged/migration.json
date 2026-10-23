@@ -1,0 +1,17 @@
+{
+    "class": "2024_07_31_000000_create_directory_tagged_table",
+    "config": "playground-directory",
+    "model": "Tagged",
+    "model_fqdn": "Playground/Directory/Models/Tagged",
+    "module": "Directory",
+    "module_slug": "directory",
+    "name": "Tagged",
+    "namespace": "Playground/Directory",
+    "organization": "Playground",
+    "package": "playground-directory",
+    "table": "directory_tagged",
+    "type": "playground-model-tagged",
+    "models": [],
+    "create": true,
+    "update": false
+}
